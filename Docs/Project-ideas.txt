@@ -1,0 +1,14 @@
+Systems one could build:
+
+Online Shopping System (Shopping Portal like OLX, Amazon)
+E-Learning System (Like Udemy, Khan Academy, Lynda)
+Online Chatting Room
+
+Hotel Management System
+Online Video Portal (Like YouTube)
+Event Management System (To Arrange Activities)
+Online Marriage Bauru (Arrange the marriage ceremony activities)
+Online Voting System
+Online Examination System
+Online Job Portal (Like in Pakistan we have “rooze.pk” and “mustaqbil.com” )
+Online issue tracking, project management systems (like Jira)
