@@ -20,7 +20,6 @@ namespace mlm_console
             });
             token.Wait();
             
-            
             //Translate text
             Translate.TextTranslate(token.Result);
         }

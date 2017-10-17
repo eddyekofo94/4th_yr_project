@@ -28,7 +28,7 @@ namespace mlm_console
             {
                 DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
                 string translation = (string)dcs.ReadObject(stream);
-                Console.WriteLine("Translation for source text '{0}' from {1} to {2} is", text, "en", "de");
+                Console.WriteLine("Translation for source text '{0}' from {1} to {2} is", text, "en", "fr");
                 Console.WriteLine(translation);
             }
         }

@@ -6,6 +6,8 @@
 [._]s[a-v][a-z]
 [._]sw[a-p]
 
+./mlm-console/Api_url.sh
+
 # Session
 Session.vim
 
