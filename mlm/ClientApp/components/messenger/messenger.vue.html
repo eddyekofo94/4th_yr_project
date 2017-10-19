@@ -1,9 +1,11 @@
-x<template>
+x
+<template>
     <div>
-            <h1>Messenger</h1>
+        <h1>Messenger</h1>
+        <input v-model="msg" placeholder="edit me">
+        <p>Message is: {{ msg }}</p>
+        <button @click="onClick">Click!</button>
 
-            <button @click="onClick">Click!</button>
-        
     </div>
 
 </template>

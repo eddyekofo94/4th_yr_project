@@ -10,7 +10,7 @@ interface Messages {
 export default class FetchMessages extends Vue{
     msg: string = "Hello"
     onClick(): void {
-        window.alert(this.msg)
+        console.log(this.msg)
     }
 
     // messages: Messages[] = [];
