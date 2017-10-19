@@ -8,12 +8,17 @@ interface Messages{
 
 @Component
 export default class FetchMessages extends Vue{
-    messages: Messages[] = [];
-    mounted() {
-        fetch('api/TranslateTest/Messages')
-            .then(response => response.json() as Promise<Messages[]>)
-            .then(data => {
-                this.messages = data;
-            });
+    msg: string = "Hello"
+    onClick(): void {
+        window.alert(this.msg)
     }
+
+    // messages: Messages[] = [];
+    // mounted() {
+    //     fetch('api/TranslateTest/Messages')
+    //         .then(response => response.json() as Promise<Messages[]>)
+    //         .then(data => {
+    //             this.messages = data;
+    //         });
+    // }
 }
