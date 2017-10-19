@@ -7,18 +7,15 @@ interface Messages {
 }
 
 @Component
-export default class FetchMessages extends Vue {
-    message: string = 'Hello!'
-    // Component methods can be declared as instance methods
-
+export default class FetchMessages extends Vue{
+    msg: string = "Hello"
     onClick(): void {
-        console.log(this.message)
+        window.alert(this.msg)
     }
 
     // messages: Messages[] = [];
-
     // mounted() {
-    //     fetch('api/TranslateText/Messages')
+    //     fetch('api/TranslateTest/Messages')
     //         .then(response => response.json() as Promise<Messages[]>)
     //         .then(data => {
     //             this.messages = data;
