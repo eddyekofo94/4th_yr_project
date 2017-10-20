@@ -13,7 +13,7 @@ namespace mlm_console
             AuthToken.Instance.AzureAuthToken(keyToken);
 
             Task<string> token = AuthToken.Instance.GetAccessTokenAsync();
-//            token.RunSynchronously();
+
             token.GetAwaiter().OnCompleted(() =>
             {
                 Console.WriteLine("Token : " + token.Result);

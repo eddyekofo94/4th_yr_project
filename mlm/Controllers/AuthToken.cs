@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Net;
-//using System.Web.Http;
-using System.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace mlm_console
+namespace mlm.Controllers
 {
     public class AuthToken
     {
@@ -145,4 +143,5 @@ namespace mlm_console
         }
         
     }
+
 }

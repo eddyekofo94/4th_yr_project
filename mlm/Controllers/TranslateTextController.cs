@@ -3,11 +3,14 @@ using System.IO;
 using System.Net;
 using System.Runtime.Serialization;
 using System.Web;
+using Microsoft.AspNetCore.Mvc;
 
-namespace mlm_console
+namespace mlm.Controllers
 {
-    public class Translate
+    [Route("api/[controller]")]
+    public class TranslateText : Controller
     {
+//        public IEnumer
         public static void TextTranslate(String authToken)
         {
 //            string text = "Hello, I am trying to translate";
@@ -17,7 +20,7 @@ namespace mlm_console
             string text;
             Console.WriteLine("Enter one or more lines of text (press CTRL+C to exit):");
             Console.WriteLine();
-            do { 
+//            do { 
 //                Console.Write("   ");
                 text = Console.ReadLine();
 //                if (text != null) 
@@ -32,12 +35,12 @@ namespace mlm_console
                     DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
                     string translation = (string)dcs.ReadObject(stream);
 //                    Console.WriteLine("Translation for source text '{0}' from {1} to {2} is", text, "en", "fr");
-                    Console.WriteLine("{0}: {1} => {2}: {3}", from, text, to, translation);
+//                    Console.WriteLine("{0}: {1} => {2}: {3}", from, text, to, translation);
                 }
-            } while (text != null);   
-            Console.Write("You've exited"); // Not working, must exit properly
+//            } while (text != null);   
+//            Console.Write("You've exited"); // Not working, must exit properly
 
         }
-        
+
     }
 }
