@@ -1,5 +1,5 @@
 import './css/site.css';
-import 'bootstrap';
+import 'bulma/css/bulma.css'
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);

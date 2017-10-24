@@ -11,7 +11,8 @@ module.exports = (env) => {
         resolve: { extensions: [ '.js' ] },
         entry: {
             vendor: [
-                'bootstrap',
+                // 'bootstrap',
+                'bulma',
                 'bootstrap/dist/css/bootstrap.css',
                 'event-source-polyfill',
                 'isomorphic-fetch',

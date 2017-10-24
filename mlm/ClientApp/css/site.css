@@ -4,3 +4,12 @@
         padding-top: 50px;
     }
 }
+
+h1{
+    color: rebeccapurple;
+}
+
+#msgInput > div{
+    position: absolute;
+    background-color: red;
+}
