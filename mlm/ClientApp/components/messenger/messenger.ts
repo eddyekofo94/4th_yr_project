@@ -15,6 +15,6 @@ export default class MessengerComponent extends Vue {
     messages: MessageBubble[] = [];
 
     onClick(): void {
-        window.alert(this.msg)
+        console.log(this.msg)
     }
 }
