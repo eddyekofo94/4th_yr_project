@@ -21,7 +21,9 @@ namespace mlm.Controllers
                 return instance;
             }
         }
-        
+            
+            //Translate text
+            // Translate.TextTranslate(token.Result);
         
         
         // URL of the token service
@@ -124,7 +126,7 @@ namespace mlm.Controllers
             string accessToken = null;
             var task = Task.Run(async () =>
             {
-                accessToken = await this.GetAccessTokenAsync();
+                accessToken = await Instance.GetAccessTokenAsync();
             });
 
             while (!task.IsCompleted)

@@ -9,38 +9,38 @@ using Microsoft.AspNetCore.Mvc;
 namespace mlm.Controllers
 {
     [Route("api/[controller]")]
-    public class TranslateText : Controller
+    public class TextTranslate : Controller
     {
-        [HttpPost]
-        public IActionResult TextTranslate([FromBody] string textIn)
-        {
-            if (textIn == null)
-            {
-                return BadRequest();
-            }
+        // [HttpPost]
+        // public string TextTranslate([FromBody] string textIn)
+        // {
+        //     if (textIn == null)
+        //     {
+        //         return "Error: Must enter a text";
+        //     }
 
-            AuthToken authToken = AuthToken.Instance;   // creates the instance from the singleton
-            // string text = "Hello, I am trying to translate";
-            string from = "en";
-            string to = "fr";
+        //     AuthToken authToken = AuthToken.Instance;   // creates the instance from the singleton
+        //     // string text = "Hello, I am trying to translate";
+        //     string from = "en";
+        //     string to = "fr";
 
-            // string text;
+        //     // string text;
 
-            string uri = "https://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + HttpUtility.UrlEncode(textIn) + "&from=" + from + "&to=" + to;
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-            httpWebRequest.Headers.Add("Authorization", authToken.GetAccessToken());
+        //     string uri = "https://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + HttpUtility.UrlEncode(textIn) + "&from=" + from + "&to=" + to;
+        //     HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
+        //     httpWebRequest.Headers.Add("Authorization", authToken.GetAccessToken());
 
-            using (WebResponse response = httpWebRequest.GetResponse())
-            using (Stream stream = response.GetResponseStream())
-            {
-                DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
-                string translation = (string)dcs.ReadObject(stream);
+        //     using (WebResponse response = httpWebRequest.GetResponse())
+        //     using (Stream stream = response.GetResponseStream())
+        //     {
+        //         DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
+        //         string translation = (string)dcs.ReadObject(stream);
             
 
-            return Json(translation);
-            }
+        //         return translation;
+        //     }
 
-        }   // End of TranslateText methos!!
+        // }   // End of TranslateText methos!!
 
         //        [HttpGet("[action]")]
         //        public Message MyMessage()
