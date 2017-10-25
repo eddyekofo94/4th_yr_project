@@ -24,7 +24,22 @@ namespace mlm.Controllers
             
             //Translate text
             // Translate.TextTranslate(token.Result);
-        
+        public string GetTokenAsync()  
+        {
+            string _keyToken = "8fcf5d73e4e94421830b6516342ef7be";
+
+            AuthToken.Instance.AzureAuthToken(_keyToken);
+
+            Task<string> token = AuthToken.Instance.GetAccessTokenAsync();
+
+            token.GetAwaiter().OnCompleted(() =>
+            {
+                Console.WriteLine("Token : " + token.Result);
+            });
+            token.Wait();
+
+            return token.Result;
+        }
         
         // URL of the token service
         private static readonly Uri ServiceUrl = new Uri("https://api.cognitive.microsoft.com/sts/v1.0/issueToken");
@@ -126,7 +141,7 @@ namespace mlm.Controllers
             string accessToken = null;
             var task = Task.Run(async () =>
             {
-                accessToken = await Instance.GetAccessTokenAsync();
+                _storedTokenValue = await Instance.GetAccessTokenAsync();
             });
 
             while (!task.IsCompleted)

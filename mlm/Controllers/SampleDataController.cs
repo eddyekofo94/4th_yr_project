@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
 using System.IO;
+using mlm;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -48,7 +49,7 @@ namespace mlm.Controllers
 
             string uri = "https://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + HttpUtility.UrlEncode(textIn) + "&from=" + from + "&to=" + to;
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-            httpWebRequest.Headers.Add("Authorization", authToken.GetAccessToken());
+            httpWebRequest.Headers.Add("Authorization", AuthToken.Instance.GetTokenAsync());
 
             using (WebResponse response = httpWebRequest.GetResponse())
             using (Stream stream = response.GetResponseStream())

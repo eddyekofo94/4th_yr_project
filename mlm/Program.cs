@@ -24,21 +24,5 @@ namespace mlm
                 .UseStartup<Startup>()
                 .Build();
         
-        public async Task<string> GetTokenAsync()  
-        {
-            string _keyToken = "8fcf5d73e4e94421830b6516342ef7be";
-
-            AuthToken.Instance.AzureAuthToken(_keyToken);
-
-            Task<string> token = AuthToken.Instance.GetAccessTokenAsync();
-
-            token.GetAwaiter().OnCompleted(() =>
-            {
-                Console.WriteLine("Token : " + token.Result);
-            });
-            token.Wait();
-
-            return token.Result;
-        }
     }
 }
