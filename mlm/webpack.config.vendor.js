@@ -15,6 +15,7 @@ module.exports = (env) => {
                 'bulma',
                 'bootstrap/dist/css/bootstrap.css',
                 'event-source-polyfill',
+                'axios',
                 'isomorphic-fetch',
                 'jquery',
                 'vue',

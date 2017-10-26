@@ -3,6 +3,7 @@ import 'bulma/css/bulma.css'
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
+// Vue.use(axios);
 
 const routes = [
     { path: '/', component: require('./components/home/home.vue.html') },

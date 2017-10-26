@@ -20,10 +20,10 @@
         </div> -->
         <div class="field has-addons">
             <div class="control">
-                <input class="input" type="text" placeholder="Sent a text...">
+                <input class="input" v-model="msg" type="text" placeholder="Sent a text...">
             </div>
             <div class="control">
-                <a @click="onClick" class="button is-info">
+                <a @click="onSend" class="button is-info">
                     <i class="fa fa-send fa-lg"></i>
                 </a>
             </div>

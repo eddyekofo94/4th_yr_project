@@ -34,7 +34,7 @@ namespace mlm.Controllers
 
             token.GetAwaiter().OnCompleted(() =>
             {
-                Console.WriteLine("Token : " + token.Result);
+//                Console.WriteLine("Token : " + token.Result);
             });
             token.Wait();
 
@@ -141,7 +141,7 @@ namespace mlm.Controllers
             string accessToken = null;
             var task = Task.Run(async () =>
             {
-                _storedTokenValue = await Instance.GetAccessTokenAsync();
+                accessToken = await Instance.GetAccessTokenAsync();
             });
 
             while (!task.IsCompleted)
