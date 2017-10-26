@@ -15,44 +15,13 @@ namespace mlm.Controllers
     [Route("api/[controller]")]
     public class MessageController : Controller
     {
-       
         [HttpPost]
-        public string SendText(string msgIn)
+        public IActionResult SendText([FromBody]string input)
         {
-            
-            Message msg = new Message();
-            Console.WriteLine("Texy Message: "+msgIn);
-            
-//            string textIn = "Hello, testing this";
-
-            if (!ModelState.IsValid)            {
-//                return false;
-                return "Error: Must enter a text";
-            }
-
-            AuthToken authToken = AuthToken.Instance;   // creates the instance from the singleton
-            // string text = "Hello, I am trying to translate";
-            string from = "en";
-            string to = "fr";
-
-            // string text;
-
-            string uri = "https://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + HttpUtility.UrlEncode(msgIn) + "&from=" + from + "&to=" + to;
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-            httpWebRequest.Headers.Add("Authorization", AuthToken.Instance.GetTokenAsync());
-
-            using (WebResponse response = httpWebRequest.GetResponse())
-            using (Stream stream = response.GetResponseStream())
-            {
-                DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
-                string translation = (string)dcs.ReadObject(stream);
-                Debug.WriteLine(translation);
-                msg.MessageTextTranslated = translation;
-                Console.WriteLine(msg.MessageTextTranslated);
-//                return true;
-                return translation;
-            }
-
+//            input = "Hello, I am Testing";
+            Message message = new Message(input);
+            Console.WriteLine(message);
+            return Json(message);
         }   // End of SendText methos!!
 
         [HttpGet("[action]")]

@@ -15,7 +15,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import Vue from 'vue';
-import axios from 'axios';
 import { Component } from 'vue-property-decorator';
 var MessageBubble = (function () {
     function MessageBubble() {
@@ -30,37 +29,38 @@ var MessengerComponent = (function (_super) {
         return _this;
     }
     MessengerComponent.prototype.onSend = function (msg) {
-        // console.log(this.msg);
-        axios.post("/api/Message/", {
+        // // console.log(this.msg);
+        // axios.post("/api/Message/" , {
+        //     headers:{
+        //         'Content-Type': "application/text",
+        //         "Accept": "application/text, text/plain, */*"
+        //     },
+        //     data: JSON.stringify(this.msg),
+        //     body: this.msg
+        // })
+        //     .then(function (res: any) {
+        //         console.log(res.data);
+        //        
+        //         return res.data;
+        //     })
+        //     .catch(function(res: any) {
+        //         if(res instanceof Error) {
+        //             console.log(res.message);
+        //         } else {
+        //             console.log(res.data);
+        //         }
+        //     });
+        fetch("/api/Message/", {
+            method: "POST",
             headers: {
-                'Content-Type': "application/text"
+                'Content-Type': 'application/json'
             },
-            data: this.msg
+            body: "Testing this program"
         })
-            .then(function (res) {
-            console.log(res.data);
-            return res;
-        })
-            .catch(function (res) {
-            if (res instanceof Error) {
-                console.log(res.message);
-            }
-            else {
-                console.log(res.data);
-            }
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+            console.log(data);
         });
-        // fetch("/api/SendMessage/",
-        //     {
-        //         method: "POST",
-        //         headers: {
-        //             'Accept': 'application/json, text/plain, */*',
-        //             'Content-Type': 'application/json'                },
-        //         body: {"message": this.msg}
-        //     })
-        //     .then(function (res) { return res.text() })
-        //     .then(function (data) {
-        //         console.log(data)
-        //     })
     };
     return MessengerComponent;
 }(Vue));

@@ -12,39 +12,39 @@ class MessageBubble {
 export default class MessengerComponent extends Vue {
 msg: string = "Hello";
 
-    onSend(msg: string) {
-        // console.log(this.msg);
-
-        axios.post("/api/Message/" , {
-            headers:{
-                'Content-Type': "application/text"
-            },
-            data: this.msg
-        })
-            .then(function (res: any) {
-                console.log(res.data);
-                
-                return res;
-            })
-            .catch(function(res: any) {
-                if(res instanceof Error) {
-                    console.log(res.message);
-                } else {
-                    console.log(res.data);
-                }
-            });
+    onSend(msg: any) {
+        // // console.log(this.msg);
+        // axios.post("/api/Message/" , {
+        //     headers:{
+        //         'Content-Type': "application/text",
+        //         "Accept": "application/text, text/plain, */*"
+        //     },
+        //     data: JSON.stringify(this.msg),
+        //     body: this.msg
+        // })
+        //     .then(function (res: any) {
+        //         console.log(res.data);
+        //        
+        //         return res.data;
+        //     })
+        //     .catch(function(res: any) {
+        //         if(res instanceof Error) {
+        //             console.log(res.message);
+        //         } else {
+        //             console.log(res.data);
+        //         }
+        //     });
         
-        // fetch("/api/SendMessage/",
-        //     {
-        //         method: "POST",
-        //         headers: {
-        //             'Accept': 'application/json, text/plain, */*',
-        //             'Content-Type': 'application/json'                },
-        //         body: {"message": this.msg}
-        //     })
-        //     .then(function (res) { return res.text() })
-        //     .then(function (data) {
-        //         console.log(data)
-        //     })
+        fetch("/api/Message/",
+            {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'                },
+                body: "Testing this program"
+            })
+            .then(function (res) { return res.json() })
+            .then(function (data) {
+                console.log(data)
+            })
     }
 }

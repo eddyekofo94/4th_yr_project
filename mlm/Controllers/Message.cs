@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Net;
+using System.Reflection.Emit;
 using System.Runtime.Serialization;
 using System.Web;
 using mlm.Controllers;
@@ -9,15 +10,22 @@ namespace mlm
 {
     public class Message
     {
-        public string MessageTime { get; set; }
-        public string MessageText { get; set; }
-        public string MessageTextTranslated{get; set;}
-
-        public void TranslateText(Message msgIn)
+        public Message(string msgIn)
         {
+            MessageTime = DateTime.Now;
+            MessageText = msgIn;
+            MessageTextTranslated = TranslateText(msgIn);
+        }
+        public DateTime MessageTime { get; set; }
+        public string MessageText { get; set; }
+        public string MessageTextTranslated{ get; set;}
+
+        public string TranslateText(string msgIn)
+        {
+            MessageTextTranslated = msgIn;
             if (msgIn == null)
             {
-                throw new ArgumentNullException();
+                return "Error, input can't be empty";
             }
 
             AuthToken authToken = AuthToken.Instance;   // creates the instance from the singleton
@@ -27,7 +35,7 @@ namespace mlm
 
             // string text;
 
-            string uri = "https://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + HttpUtility.UrlEncode(msgIn.MessageText) + "&from=" + from + "&to=" + to;
+            string uri = "https://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + HttpUtility.UrlEncode(msgIn) + "&from=" + from + "&to=" + to;
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
             httpWebRequest.Headers.Add("Authorization", AuthToken.Instance.GetTokenAsync());
 
@@ -36,9 +44,8 @@ namespace mlm
             {
                 DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
                 string translation = (string)dcs.ReadObject(stream);
-            
-
-                MessageTextTranslated = translation;
+            //This should return the translated text
+               return translation;
             }
         }
         
