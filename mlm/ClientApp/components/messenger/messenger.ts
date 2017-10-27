@@ -2,47 +2,26 @@ import Vue from 'vue';
 import axios from 'axios';
 import { Component } from 'vue-property-decorator';
 
-class MessageBubble {
-    dateSent: Date;
-    message: string;
-    messageTranslated: string;
+interface MessageBubble {
+    MessageText: string;
 }
 
 @Component
 export default class MessengerComponent extends Vue {
-msg: string = "Hello";
+msg: string = "Hello, This is a test text";
+messageBubble: MessageBubble;
 
-    onSend(msg: any) {
-        // // console.log(this.msg);
-        // axios.post("/api/Message/" , {
-        //     headers:{
-        //         'Content-Type': "application/text",
-        //         "Accept": "application/text, text/plain, */*"
-        //     },
-        //     data: JSON.stringify(this.msg),
-        //     body: this.msg
-        // })
-        //     .then(function (res: any) {
-        //         console.log(res.data);
-        //        
-        //         return res.data;
-        //     })
-        //     .catch(function(res: any) {
-        //         if(res instanceof Error) {
-        //             console.log(res.message);
-        //         } else {
-        //             console.log(res.data);
-        //         }
-        //     });
-        
+    onSend() {
+      
         fetch("/api/Message/",
             {
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json'                },
-                body: "Testing this program"
+                    "Content-Type": "application/json"  
+                },
+                body: JSON.stringify({"MessageText": this.msg})
             })
-            .then(function (res) { return res.json() })
+            .then(function (res) { return res.text() })
             .then(function (data) {
                 console.log(data)
             })

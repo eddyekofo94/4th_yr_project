@@ -10,19 +10,22 @@ namespace mlm
 {
     public class Message
     {
-        public Message(string msgIn)
-        {
-            MessageTime = DateTime.Now;
-            MessageText = msgIn;
-            MessageTextTranslated = TranslateText(msgIn);
-        }
-        public DateTime MessageTime { get; set; }
-        public string MessageText { get; set; }
-        public string MessageTextTranslated{ get; set;}
+//        curl -i -H "Content-Type: application/json" -d {'MessageText':'Hello, this is a test'} http://localhost:5000/api/Message/
+//   curl -i -H "Content-Type: application/json" -d {"MessageText" : "Hello Terry this is not working" http://localhost:5000/api/Message/
 
-        public string TranslateText(string msgIn)
+//        public Message()
+//        {
+//            MessageTime = DateTime.Now;
+//            MessageText = "";
+//            MessageTranslated = TranslateText(MessageText);
+//        }
+
+        public string MessageText { get; set; }
+//        public string MessageTranslated{ get; set;}
+
+        public static string TranslateText(string msgIn)
         {
-            MessageTextTranslated = msgIn;
+//            MessageTranslated = msgIn;
             if (msgIn == null)
             {
                 return "Error, input can't be empty";
@@ -45,10 +48,15 @@ namespace mlm
                 DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
                 string translation = (string)dcs.ReadObject(stream);
             //This should return the translated text
+                Console.WriteLine(translation);
                return translation;
             }
         }
-        
-}
+
+        public override string ToString()
+        {
+            return string.Format("Message: {0}", MessageText);
+        }
+    }
     
 }

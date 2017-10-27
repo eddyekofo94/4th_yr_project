@@ -16,48 +16,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-var MessageBubble = (function () {
-    function MessageBubble() {
-    }
-    return MessageBubble;
-}());
 var MessengerComponent = (function (_super) {
     __extends(MessengerComponent, _super);
     function MessengerComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.msg = "Hello";
+        _this.msg = "Hello, This is a test text";
         return _this;
     }
-    MessengerComponent.prototype.onSend = function (msg) {
-        // // console.log(this.msg);
-        // axios.post("/api/Message/" , {
-        //     headers:{
-        //         'Content-Type': "application/text",
-        //         "Accept": "application/text, text/plain, */*"
-        //     },
-        //     data: JSON.stringify(this.msg),
-        //     body: this.msg
-        // })
-        //     .then(function (res: any) {
-        //         console.log(res.data);
-        //        
-        //         return res.data;
-        //     })
-        //     .catch(function(res: any) {
-        //         if(res instanceof Error) {
-        //             console.log(res.message);
-        //         } else {
-        //             console.log(res.data);
-        //         }
-        //     });
+    MessengerComponent.prototype.onSend = function () {
         fetch("/api/Message/", {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             },
-            body: "Testing this program"
+            body: JSON.stringify({ "MessageText": this.msg })
         })
-            .then(function (res) { return res.json(); })
+            .then(function (res) { return res.text(); })
             .then(function (data) {
             console.log(data);
         });

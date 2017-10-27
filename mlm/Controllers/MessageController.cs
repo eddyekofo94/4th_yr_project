@@ -8,6 +8,7 @@ using System.Web;
 using System.IO;
 using mlm;
 using System.Threading.Tasks;
+//using System.Web.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace mlm.Controllers
@@ -16,29 +17,27 @@ namespace mlm.Controllers
     public class MessageController : Controller
     {
         [HttpPost]
-        public IActionResult SendText([FromBody]string input)
+        public string SendText([FromBody]Message input)
         {
-//            input = "Hello, I am Testing";
-            Message message = new Message(input);
-            Console.WriteLine(message);
-            return Json(message);
+            Debug.Write(Message.TranslateText(input.MessageText));
+            return Message.TranslateText(input.MessageText);
         }   // End of SendText methos!!
 
-        [HttpGet("[action]")]
-        public string Get(int id)
+        [Microsoft.AspNetCore.Mvc.HttpGet("[action]")]
+        public string GetMsg(int id)
         {
             return "value";
         }
         
         // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [Microsoft.AspNetCore.Mvc.HttpPut("{id}")]
+        public void PutMsg(int id, [Microsoft.AspNetCore.Mvc.FromBody] string value)
         {
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [Microsoft.AspNetCore.Mvc.HttpDelete("{id}")]
+        public void DeleteMsg(int id)
         {
         }
     }
