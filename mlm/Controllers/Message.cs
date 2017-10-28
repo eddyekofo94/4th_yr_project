@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Reflection.Emit;
@@ -15,28 +16,33 @@ namespace mlm
 
         public Message(string msgIn)
         {
-            MessageTime = DateTime.Now;
+            MessageTime = DateTime.UtcNow.ToString("HH:mm dd-MMM-yy", DateTimeFormatInfo.InvariantInfo);
+//            Console.WriteLine(MessageTime.ToString("d", DateTimeFormatInfo.InvariantInfo));
+
             MessageText = msgIn;
             MessageTranslated = TranslateText(MessageText);
         }
+ 
+        public string MessageTime
+        {
+            get;
+            set;
+        }
 
-        public DateTime MessageTime {
-                     get;
-                     set;
-                 }
         public string MessageText { get; set; }
         public string MessageTranslated{ get; set;}
-
+        
+        // Translates the text to the desired language
+        //TODO: Change to the preffered language.
         public static string TranslateText(string msgIn)
         {
-//            MessageTranslated = msgIn;
             if (msgIn == null)
             {
                 return "Error, input can't be empty";
             }
 
             AuthToken authToken = AuthToken.Instance;   // creates the instance from the singleton
-            // string text = "Hello, I am trying to translate";
+
             string from = "en";
             string to = "fr";
 
