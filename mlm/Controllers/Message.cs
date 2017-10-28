@@ -11,55 +11,55 @@ namespace mlm
 {
     public class Message
     {
-//        curl -i -H "Content-Type: application/json" -d {'MessageText':'Hello, this is a test'} http://localhost:5000/api/Message/
-//   curl -i -H "Content-Type: application/json" -d {"MessageText" : "Hello Terry this is not working" http://localhost:5000/api/Message/
-
+        
+        // curl -i -H "Content-Type: application/json" -d {"MessageText" : "Hello Terry this is not working"} http://localhost:5000/api/Message/
+        
+        // Class constructor
         public Message(string msgIn)
         {
+            // Date format "02:14 28-Oct-17"
+            // TODO: Date according to each region?
             MessageTime = DateTime.UtcNow.ToString("HH:mm dd-MMM-yy", DateTimeFormatInfo.InvariantInfo);
-//            Console.WriteLine(MessageTime.ToString("d", DateTimeFormatInfo.InvariantInfo));
-
             MessageText = msgIn;
             MessageTranslated = TranslateText(MessageText);
         }
- 
-        public string MessageTime
-        {
-            get;
-            set;
-        }
 
+        public string MessageTime { get; set; }
         public string MessageText { get; set; }
-        public string MessageTranslated{ get; set;}
-        
+        public string MessageTranslated { get; set; }
+
         // Translates the text to the desired language
         //TODO: Change to the preffered language.
         public static string TranslateText(string msgIn)
         {
+            
+            // If the input is null somehow, throw an exception
             if (msgIn == null)
             {
-                return "Error, input can't be empty";
+                throw new ArgumentNullException();
             }
 
-            AuthToken authToken = AuthToken.Instance;   // creates the instance from the singleton
+            // creates the instance from the AuthToken singleton
+            AuthToken authToken = AuthToken.Instance;
 
+            //TODO: Change accoring to whichever language the user desires
             string from = "en";
             string to = "fr";
-
-            // string text;
-
-            string uri = "https://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + HttpUtility.UrlEncode(msgIn) + "&from=" + from + "&to=" + to;
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
+            
+            //The translator API is used and the from & to determines the translation
+            string uri = "https://api.microsofttranslator.com/v2/Http.svc/Translate?text=" +
+                         HttpUtility.UrlEncode(msgIn) + "&from=" + from + "&to=" + to;
+            HttpWebRequest httpWebRequest = (HttpWebRequest) WebRequest.Create(uri);
             httpWebRequest.Headers.Add("Authorization", AuthToken.Instance.GetTokenAsync());
 
             using (WebResponse response = httpWebRequest.GetResponse())
             using (Stream stream = response.GetResponseStream())
             {
                 DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
-                string translation = (string)dcs.ReadObject(stream);
-            //This should return the translated text
-                Console.WriteLine(translation);
-               return translation;
+                string translation = (string) dcs.ReadObject(stream);
+
+                //This should return the translated text
+                return translation;
             }
         }
 
@@ -68,5 +68,4 @@ namespace mlm
             return string.Format("Message: {0}", MessageText);
         }
     }
-    
 }

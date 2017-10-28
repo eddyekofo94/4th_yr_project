@@ -1,19 +1,10 @@
 using System;
-using System.Net;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Web;
-using System.IO;
-using mlm;
-using System.Threading.Tasks;
-//using System.Web.Http;
+using System.Web.Http.ModelBinding;
 using Microsoft.AspNetCore.Mvc;
 
 namespace mlm.Controllers
 {
+    // TODO: implement all the APIs
     [Route("api/[controller]")]
     public class MessageController : Controller
     {
@@ -21,31 +12,50 @@ namespace mlm.Controllers
         public class MessageSent
         {
             public string MessageText { get; set; }
+            public long MessageTime { get; set; }
         }
         
+        /*
+         * In order for binding to happen the class must have a public
+         * default constructor and member to be bound must be public
+         * writable properties. When model binding happens the class
+         * will only be instantiated using the public default constructor,
+         * then the properties can be set.
+         */
         [HttpPost]
-        public Message SendText([FromBody]MessageSent input)
+        public IActionResult SendText([FromBody] MessageSent msgIn)
         {
-            // Thr Message Buble is the data returned from this
-            //post request.
-            Message msg = new Message(input.MessageText);
-            return msg;
-        }   // End of SendText methos!!
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Please, resend text");
+                Console.WriteLine("\n ***Error, Model is Invalid *** \n ");
+            }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet("[action]")]
+            /*
+             * You can query for model state errors by checking
+             * the ModelState.IsValid property
+             */
+            // The Message Buble is the data returned from this
+            // POST request.
+            Message msg = new Message(msgIn.MessageText);
+            return Ok(msg);
+        } // End of SendText methos!!
+        
+        // TODO: Make a list of messages and be able to retrieve them
+        [HttpGet("[action]")]
         public string GetMsg(int id)
         {
             return "value";
         }
-        
+
         // PUT api/values/5
-        [Microsoft.AspNetCore.Mvc.HttpPut("{id}")]
-        public void PutMsg(int id, [Microsoft.AspNetCore.Mvc.FromBody] string value)
+        [HttpPut("{id}")]
+        public void PutMsg(int id, [FromBody] string value)
         {
         }
 
         // DELETE api/values/5
-        [Microsoft.AspNetCore.Mvc.HttpDelete("{id}")]
+        [HttpDelete("{id}")]
         public void DeleteMsg(int id)
         {
         }

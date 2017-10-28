@@ -1,26 +1,16 @@
 <template>
     <div>
         <h1>Messenger Page</h1>
-        <!-- <textarea v-model="msg" placeholder="add multiple lines"></textarea>         -->
-        <!-- <br> -->
-        <!-- <button @click="onClick">Click!</button> -->
         <div class="jumbotron">
-            <p style="white-space: pre-line;">{{ msg }}</p>
+            <p style="white-space: pre-line;">{{ messageBubble.MessageText }}</p>
             <br>
             <div class="form-group bottom-align">
             </div>
         </div>
-        <!-- <div class="input-group">
-            <input type="text" placeholder="Send a text..." class="form-control">
-            <span class="input-group-btn">
-                <a @click="onClick" class="btn btn-primary">
-                    <i class="fa fa-send fa-lg"></i>
-                </a>
-            </span>
-        </div> -->
+    
         <div class="field has-addons">
                 <div class="control">
-                    <input class="input" v-model="msg" type="text" placeholder="Sent a text...">
+                    <input class="input" v-model="messageBubble.MessageText" type="text" placeholder="Sent a text...">
                 </div>
                 <div class="control">
                     <a @click="onSend" class="button is-info">

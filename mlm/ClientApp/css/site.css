@@ -1,15 +1,11 @@
 @media (max-width: 767px) {
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-    body {
-        padding-top: 50px;
-    }
+    body { padding-top: 50px; }
 }
 
-h1{
-    color: rebeccapurple;
-}
+h1 { color: rebeccapurple; }
 
-#msgInput > div{
+#msgInput > div {
     position: absolute;
     background-color: red;
 }

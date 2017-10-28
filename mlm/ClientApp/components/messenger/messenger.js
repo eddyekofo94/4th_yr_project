@@ -16,33 +16,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
+var MessageText;
 var MessengerComponent = (function (_super) {
     __extends(MessengerComponent, _super);
     function MessengerComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.msg = "Hello";
         _this.messageBubble = {
-            MessageText: _this.msg,
-            MessageTime: Date.now(),
-            MessageTranslated: _this.msg
+            MessageText: MessageText,
+            MessageTime: Date.now()
         };
         return _this;
     }
     // This button sends the text message to the API to be translated
     MessengerComponent.prototype.onSend = function () {
-        console.log(this.messageBubble);
+        console.log(JSON.stringify(this.messageBubble));
         fetch("/api/Message/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             //The varibles must match those of the Model else, it won't work.
-            body: JSON.stringify({ "MessageText": this.msg })
-            // body: JSON.stringify(this.messageBubble)
+            body: JSON.stringify(this.messageBubble)
         })
-            .then(function (res) { return res.json(); })
+            .then(function (res) {
+            if (!res.ok) {
+                throw Error(res.statusText);
+            }
+            return res.json();
+        })
             .then(function (data) {
             console.log(data);
+        })
+            .catch(function () {
+            console.log("Error, with the input or server");
         });
     };
     return MessengerComponent;

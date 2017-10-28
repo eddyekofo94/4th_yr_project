@@ -35,7 +35,7 @@ namespace mlm.Controllers
         //     {
         //         DataContractSerializer dcs = new DataContractSerializer(Type.GetType("System.String"));
         //         string translation = (string)dcs.ReadObject(stream);
-            
+
 
         //         return translation;
         //     }
@@ -59,7 +59,7 @@ namespace mlm.Controllers
         // [HttpPost]
         // public IActionResult SendText()
         // {
-            
+
         // }
 
         // PUT api/values/5
@@ -73,7 +73,5 @@ namespace mlm.Controllers
         public void Delete(int id)
         {
         }
-
-    }   // end of TranslateText class
-
+    } // end of TranslateText class
 }

@@ -23,6 +23,5 @@ namespace mlm
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
-        
     }
 }
