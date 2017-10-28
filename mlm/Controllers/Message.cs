@@ -13,15 +13,19 @@ namespace mlm
 //        curl -i -H "Content-Type: application/json" -d {'MessageText':'Hello, this is a test'} http://localhost:5000/api/Message/
 //   curl -i -H "Content-Type: application/json" -d {"MessageText" : "Hello Terry this is not working" http://localhost:5000/api/Message/
 
-//        public Message()
-//        {
-//            MessageTime = DateTime.Now;
-//            MessageText = "";
-//            MessageTranslated = TranslateText(MessageText);
-//        }
+        public Message(string msgIn)
+        {
+            MessageTime = DateTime.Now;
+            MessageText = msgIn;
+            MessageTranslated = TranslateText(MessageText);
+        }
 
+        public DateTime MessageTime {
+                     get;
+                     set;
+                 }
         public string MessageText { get; set; }
-//        public string MessageTranslated{ get; set;}
+        public string MessageTranslated{ get; set;}
 
         public static string TranslateText(string msgIn)
         {

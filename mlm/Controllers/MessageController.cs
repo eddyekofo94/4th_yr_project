@@ -16,11 +16,17 @@ namespace mlm.Controllers
     [Route("api/[controller]")]
     public class MessageController : Controller
     {
-        [HttpPost]
-        public string SendText([FromBody]Message input)
+        public class MessageSent
         {
-            Debug.Write(Message.TranslateText(input.MessageText));
-            return Message.TranslateText(input.MessageText);
+            public string MessageText { get; set; }
+        }
+        
+        [HttpPost]
+        public Message SendText([FromBody]MessageSent input)
+        {
+            Message msg = new Message(input.MessageText);
+//            Debug.Write(Message.TranslateText(input.MessageText));
+            return msg;
         }   // End of SendText methos!!
 
         [Microsoft.AspNetCore.Mvc.HttpGet("[action]")]
