@@ -37,7 +37,7 @@ namespace mlm.Controllers
              */
             // The Message Buble is the data returned from this
             // POST request.
-            Message msg = new Message(msgIn.MessageText);
+            Message msg = new Message(msgIn.MessageText, msgIn.MessageTime);
             return Ok(msg);
         } // End of SendText methos!!
         

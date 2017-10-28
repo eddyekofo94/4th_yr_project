@@ -21,7 +21,8 @@ var MessengerComponent = (function (_super) {
     __extends(MessengerComponent, _super);
     function MessengerComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.messageBubble = {
+        _this.messageBubble = [];
+        _this.messageSent = {
             MessageText: MessageText,
             MessageTime: Date.now()
         };
@@ -29,22 +30,19 @@ var MessengerComponent = (function (_super) {
     }
     // This button sends the text message to the API to be translated
     MessengerComponent.prototype.onSend = function () {
-        console.log(JSON.stringify(this.messageBubble));
+        var _this = this;
+        console.log(JSON.stringify(this.messageSent));
         fetch("/api/Message/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             //The varibles must match those of the Model else, it won't work.
-            body: JSON.stringify(this.messageBubble)
+            body: JSON.stringify(this.messageSent)
         })
-            .then(function (res) {
-            if (!res.ok) {
-                throw Error(res.statusText);
-            }
-            return res.json();
-        })
+            .then(function (response) { return response.json(); })
             .then(function (data) {
+            _this.messageBubble = data;
             console.log(data);
         })
             .catch(function () {

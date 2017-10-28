@@ -2,15 +2,24 @@
     <div>
         <h1>Messenger Page</h1>
         <div class="jumbotron">
-            <p style="white-space: pre-line;">{{ messageBubble.MessageText }}</p>
-            <br>
+            <!--<p style="white-space: pre-line;">{{ messageSent.MessageText }}</p>-->
+            <p v-if="messageBubble">
+            <p style="color: darkblue;">
+            {{ messageBubble.messageTime }}
+            </p>
+            <p style="color: crimson;">
+                {{ messageBubble.messageTranslated }}
+            </p>
+                <!--<tr v-for="item in messageBubble">-->
+                    <!--<p style="color: crimson;">{{ item }}</p>-->
+                <!--</tr>-->
             <div class="form-group bottom-align">
             </div>
         </div>
     
         <div class="field has-addons">
                 <div class="control">
-                    <input class="input" v-model="messageBubble.MessageText" type="text" placeholder="Sent a text...">
+                    <input class="input" v-model="messageSent.MessageText" type="text" placeholder="Sent a text...">
                 </div>
                 <div class="control">
                     <a @click="onSend" class="button is-info">
@@ -20,8 +29,6 @@
             </div>
 
         </div>
-
-    </div>
 </template>
 
 <script src="./messenger.ts"></script>

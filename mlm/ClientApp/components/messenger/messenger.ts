@@ -9,18 +9,20 @@ interface MessageBubble {
     MessageTranslated?: string;
 }
 
-    let MessageText: string;
+let MessageText: string;
+
 @Component
 export default class MessengerComponent extends Vue {
-    
-    messageBubble: MessageBubble = {
+     messageBubble: MessageBubble[] = [];
+
+    messageSent: MessageBubble = {
         MessageText: MessageText,
         MessageTime: Date.now()
     };
 
     // This button sends the text message to the API to be translated
     onSend() {
-        console.log(JSON.stringify(this.messageBubble));
+        console.log(JSON.stringify(this.messageSent));
         fetch("/api/Message/",
                 {
                     method: "POST",
@@ -28,15 +30,11 @@ export default class MessengerComponent extends Vue {
                         "Content-Type": "application/json"
                     },
                     //The varibles must match those of the Model else, it won't work.
-                    body: JSON.stringify(this.messageBubble)
+                    body: JSON.stringify(this.messageSent)
                 })
-            .then(function(res) {
-                if (!res.ok) {
-                    throw Error(res.statusText);
-                }
-                return res.json() 
-            })
-            .then(function(data) {
+            .then(response => response.json() as Promise<MessageBubble[]>)
+            .then(data =>{
+                this.messageBubble = data;
                 console.log(data)
             })
             .catch(function() {

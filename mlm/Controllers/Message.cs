@@ -15,11 +15,13 @@ namespace mlm
         // curl -i -H "Content-Type: application/json" -d {"MessageText" : "Hello Terry this is not working"} http://localhost:5000/api/Message/
         
         // Class constructor
-        public Message(string msgIn)
+        public Message(string msgIn, long timeIn)
         {
             // Date format "02:14 28-Oct-17"
             // TODO: Date according to each region?
-            MessageTime = DateTime.UtcNow.ToString("HH:mm dd-MMM-yy", DateTimeFormatInfo.InvariantInfo);
+//            MessageTime = DateTime.UtcNow.ToString("HH:mm dd-MMM-yy", DateTimeFormatInfo.InvariantInfo);
+            // Translate's JavaScript's time to C#'s DateTime.
+            MessageTime =  new DateTime(1970, 1, 1).AddTicks(timeIn * 10000).ToString("HH:mm ddd dd-MM-yyyy ", DateTimeFormatInfo.InvariantInfo);
             MessageText = msgIn;
             MessageTranslated = TranslateText(MessageText);
         }
