@@ -1,0 +1,36 @@
+<template>
+    <v-list dense>
+        <v-list class="pa-0">
+        <v-list-tile avatar>
+            <v-list-tile-avatar>
+                <img src="https://randomuser.me/api/portraits/men/85.jpg" />
+            </v-list-tile-avatar>
+            <v-list-tile-content>
+                <v-list-tile-title>Joe Blogs</v-list-tile-title>
+            </v-list-tile-content>
+        </v-list-tile>
+        </v-list>
+        <hr>
+        <v-list-tile @click="messenger">
+            <v-list-tile-action>
+                <v-icon>chat_bubble_outline</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+                <v-list-tile-title>Messenger</v-list-tile-title>
+            </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile @click="counter">
+            <v-list-tile-action>
+                <v-icon>dashboard</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+                <v-list-tile-content>
+                    <v-list-tile-title>Dashboard</v-list-tile-title>
+                </v-list-tile-content>
+            </v-list-tile-content>
+        </v-list-tile>
+    </v-list>
+</template>
+
+<script src="./layout.ts"></script>
+<style src="./navmenu.css" />

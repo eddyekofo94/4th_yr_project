@@ -13,7 +13,7 @@ let MessageText: string;
 
 @Component
 export default class MessengerComponent extends Vue {
-     messageBubble: MessageBubble[] = [];
+    messageBubble: MessageBubble[] = [];
 
     messageSent: MessageBubble = {
         MessageText: MessageText,
@@ -23,22 +23,18 @@ export default class MessengerComponent extends Vue {
     // This button sends the text message to the API to be translated
     onSend() {
         console.log(JSON.stringify(this.messageSent));
-        fetch("/api/Message/",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    //The varibles must match those of the Model else, it won't work.
-                    body: JSON.stringify(this.messageSent)
-                })
-            .then(response => response.json() as Promise<MessageBubble[]>)
-            .then(data =>{
+        axios.post('/api/Message/', JSON.stringify(this.messageSent), {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.data as Promise<MessageBubble[]>)
+            .then(data => {
                 this.messageBubble = data;
                 console.log(data)
             })
-            .catch(function() {
-                console.log("Error, with the input or server");
+            .catch(function (error) {
+                console.log(error, "Error, with the input or server");
             });
     }
 }

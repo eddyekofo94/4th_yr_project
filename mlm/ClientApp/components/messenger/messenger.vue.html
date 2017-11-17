@@ -1,34 +1,35 @@
 <template>
-    <div>
-        <h1>Messenger Page</h1>
-        <div class="jumbotron">
-            <!--<p style="white-space: pre-line;">{{ messageSent.MessageText }}</p>-->
-            <p v-if="messageBubble">
-            <p style="color: darkblue;">
-            {{ messageBubble.messageTime }}
-            </p>
-            <p style="color: crimson;">
-                {{ messageBubble.messageTranslated }}
-            </p>
-                <!--<tr v-for="item in messageBubble">-->
-                    <!--<p style="color: crimson;">{{ item }}</p>-->
-                <!--</tr>-->
-            <div class="form-group bottom-align">
-            </div>
-        </div>
-    
-        <div class="field has-addons">
-                <div class="control">
-                    <input class="input" v-model="messageSent.MessageText" type="text" placeholder="Sent a text...">
-                </div>
-                <div class="control">
-                    <a @click="onSend" class="button is-info">
-                        <i class="fa fa-send fa-lg"></i>
-                    </a>
-                </div>
-            </div>
 
-        </div>
+    <div id="e3" style="height:100%; max-width: 900px; margin: auto;" class="grey lighten-3">
+        <v-container fluid style="min-height: 0;" grid-list-lg>
+        <v-flex xs12 >
+            <v-card color="blue-grey darken-2" class="white--text">
+                <v-card-title primary-title>
+                    <div class="headline">User's name</div>
+                </v-card-title>
+                <p v-if="messageBubble">
+                    <p style="color: darkblue;">
+                        {{ messageBubble.messageTime }}
+                    </p>
+                    <p style="color: crimson;">
+                        {{ messageBubble.messageTranslated }}
+                    </p>
+            </v-card>
+        </v-flex>
+        <!--<tr v-for="item in messageBubble">-->
+        <!--<p style="color: crimson;">{{ item }}</p>-->
+        <!--</tr>-->
+        <v-layout row >
+            <v-flex xs12>
+                <v-text-field v-model="messageSent.MessageText" name="input-1-3" label="Send a text..." single-line light>
+                </v-text-field>
+            </v-flex>
+            <div>
+                <v-btn @click="onSend" round color="primary" dark>Send</v-btn>
+            </div>
+        </v-layout>
+        </v-container>
+    </div>
 </template>
 
 <script src="./messenger.ts"></script>

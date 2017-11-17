@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "firebase": "^4.6.2",
+    "vuefire": "^1.4.4"
+  }
+}

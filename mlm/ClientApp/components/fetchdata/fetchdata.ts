@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
+import Component from 'vue-class-component';
 
 interface WeatherForecast {
     dateFormatted: string;
@@ -18,5 +18,6 @@ export default class FetchDataComponent extends Vue {
             .then(data => {
                 this.forecasts = data;
             });
+            console.log("Test")
     }
 }

@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/mlm.csproj"
+                "${workspaceFolder}/mlm-console.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

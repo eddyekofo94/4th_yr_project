@@ -1,5 +1,6 @@
 using System;
-using System.Web.Http.ModelBinding;
+using System.ComponentModel.DataAnnotations;
+// using System.Web.Http.ModelBinding;
 using Microsoft.AspNetCore.Mvc;
 
 namespace mlm.Controllers
@@ -11,10 +12,11 @@ namespace mlm.Controllers
         // The message sent to be translated by the user
         public class MessageSent
         {
+            [Required]    // This attribute is required
             public string MessageText { get; set; }
             public long MessageTime { get; set; }
         }
-        
+
         /*
          * In order for binding to happen the class must have a public
          * default constructor and member to be bound must be public
@@ -23,12 +25,12 @@ namespace mlm.Controllers
          * then the properties can be set.
          */
         [HttpPost]
+        // [Produces(typeof(Message))]
         public IActionResult SendText([FromBody] MessageSent msgIn)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest("Please, resend text");
-                Console.WriteLine("\n ***Error, Model is Invalid *** \n ");
+                return BadRequest(ModelState);
             }
 
             /*
@@ -40,7 +42,7 @@ namespace mlm.Controllers
             Message msg = new Message(msgIn.MessageText, msgIn.MessageTime);
             return Ok(msg);
         } // End of SendText methos!!
-        
+
         // TODO: Make a list of messages and be able to retrieve them
         [HttpGet("[action]")]
         public string GetMsg(int id)
