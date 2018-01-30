@@ -1,0 +1,20 @@
+{
+  "name": "mlm",
+  "version": "1.0.0",
+  "description": "A chat with translate",
+  "main": ".",
+  "scripts": {
+    "test": "run dev"
+  },
+  "keywords": [
+    "aps.net",
+    "js",
+    "razor",
+    "signalR"
+  ],
+  "author": "Eddy Ekofo",
+  "license": "MIT",
+  "dependencies": {
+    "@aspnet/signalr-client": "^1.0.0-alpha2-final"
+  }
+}
