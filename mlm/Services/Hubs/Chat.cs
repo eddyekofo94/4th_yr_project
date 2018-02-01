@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
+using System;
 
-namespace mlm.Chat
+namespace mlm.Services.Hubs
 {
     public class Chat : Hub
     {

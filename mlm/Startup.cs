@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using mlm.Data;
 using mlm.Models;
 using mlm.Services;
+using mlm.Services.Hubs;
 
 namespace mlm
 {
@@ -26,9 +27,7 @@ namespace mlm
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //    signlaR
-            services.AddSignalR();
-            
+     
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -40,6 +39,9 @@ namespace mlm
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
+            
+            //    signlaR
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,7 +63,7 @@ namespace mlm
             
             app.UseSignalR(routes =>
             {
-                routes.MapHub<Chat.Chat>("chat");
+                routes.MapHub<Chat>("chat");
 
             });
 

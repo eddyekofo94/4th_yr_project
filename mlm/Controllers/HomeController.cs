@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using mlm.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace mlm.Controllers
 {
@@ -15,6 +16,7 @@ namespace mlm.Controllers
             return View();
         }
         
+        [Authorize]
         public IActionResult Message()
         {
             ViewData["Message"] = "Messages Page.";
