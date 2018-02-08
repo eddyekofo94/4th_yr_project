@@ -6,9 +6,9 @@ namespace mlm.Services.Hubs
 {
     public class Chat : Hub
     {
-        public async Task Send(string message)
-        {
-            await Clients.All.InvokeAsync("Send", message);
-        }   
+//        public async Task Send(string message)
+//        {
+//            await Clients.All.InvokeAsync("Send", message);
+//        }   
     }
 }
