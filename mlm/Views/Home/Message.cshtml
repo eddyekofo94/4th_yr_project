@@ -12,7 +12,7 @@
     </form>
     <div class="clear">
     </div>
-    <ul id="postsList"></ul>
+    @*    <ul id="postsList"></ul>*@
 
     <ul id="messages"></ul>
 </div>
@@ -41,7 +41,7 @@
 
             $.post("http://localhost:5000/api/chat/send/" + msg,
                 function(data) {
-                    addPost(data);
+//                    addPost(data);
 //                    addPostsList(data);
                     console.log(data);
                 });
@@ -51,7 +51,7 @@
         });
 
         function addPost(post) {
-            console.log('New post from server: ', post);
+//            console.log('New post from server: ', post);
             $("#messages")
                 .append('<li>' +
                     post.author +
@@ -67,8 +67,9 @@
                 $.each(message,
                     function(index) {
                         var post = message[index];
-                        addPost(message);
+                        console.log(post);
                     });
+                addPost(message);
             });
     });
 

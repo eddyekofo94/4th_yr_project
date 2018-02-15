@@ -47,14 +47,15 @@ namespace mlm.Controllers
         {
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("Eror!!!!!!!!!!1");
+                Console.WriteLine("Eror!!!");
                 return BadRequest();
             }
 
             // Get the current user
             var user = await GetCurrentUserAsync();
             if (user == null) return Forbid();
-
+            
+            Console.WriteLine("USER ID: " + user.Id);
             // Create a new message to save to the database
             MessageModel newMessage = new MessageModel(message)
             {
