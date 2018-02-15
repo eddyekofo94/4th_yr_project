@@ -7,100 +7,44 @@
 <div id="chat">
     <form id="frm-send-message" action="#">
         <label for="message">Message:</label>
-        <input type="text" id="message" />
-        <input type="submit" id="send" value="Send" />
+        <input type="text" id="message"/>
+        <input type="submit" id="send" value="Send"/>
     </form>
     <div class="clear">
     </div>
     <ul id="messages"></ul>
 </div>
-
-<div class="container">
-    <input type="button" id="getValues" value="Send" />
-    <ul id="discussion"></ul>
-</div>
-
+<script src="~/js/jquery.js"></script>
 <script src="~/js/signalr-client-1.0.0-alpha2-final.min.js"></script>
 
-<script>
-    
+<script language="javascript" type="text/javascript">
+
     let transport = signalR.TransportType.WebSockets;
     let connection = new signalR.HubConnection(`http://${document.location.host}/chat`, { transport: transport });
-    
-//    connection.on('Send', (message) => {
-//        appendLine(message);    
-//    });
- 
-    document.getElementById('frm-send-message').addEventListener('submit', event => {
+
+    $(document).ready(function() {
+        $( "#message" ).focus();
+
+        $("#frm-send-message").submit(function() {
+            var msg = $('#message').val();
+
+            $.post("http://localhost:5000/api/chat/send/" + msg,
+                function(data) {
+                    console.log(data);
+                });
+        $("#frm-send-message").trigger("reset");
+        });
         
-       window.fetch("http://localhost:5000/api/chat/")
-           .then(function (data) {
-               console.log(data);
-           })
-           .catch(function (error) {
-               console.log(error);
-           });
-// 
-//        connection.on('Send', message);   
-//        event.preventDefault();
+
     });
- 
-    function appendLine(line, color) {
-        let li = document.createElement('li');
-        li.innerText = line;
-        document.getElementById('messages').appendChild(li);
-    };
-    
-//    var button = document.getElementById("getValues");
-    connection.on('Send', () => {
-        
-        let message = document.getElementById('message').value;
-        document.getElementById('message').value = '';
-        let liElement = document.createElement('li');
-        liElement.innerHTML = message ;
-        document.getElementById('messages').appendChild(liElement);
-    });
-    
-//    button.addEventListener("click", event => {
-//        window.fetch("http://localhost:5000/api/chat/")
-//            .then(function (data) {
-//                console.log(data);
-//            })
-//            .catch(function (error) {
-//                console.log(err);
-//            });
-//    });
- 
-//   document.getElementById('frm-send-message').addEventListener('submit', event => {
-//   let message = document.getElementById('message').value;
-//        document.getElementById('message').value = '';
-//       window.fetch("http://localhost:5000/api/chat/")
-//           .then(function (data) {
-//               console.log(data);
-//           })
-//           .catch(function (error) {
-//               console.log(err);
-//           });
-//       connection.on('Send', (value) => {
-//           
-//           let li = document.createElement('li');
-//            
-//           li.innerText = line;
-//           document.getElementById('messages').appendChild(li);
-////           let liElement = document.createElement('li');
-////           liElement.innerHTML = 'Someone caled a controller method with value: ' + value;
-////           document.getElementById('discussion').appendChild(liElement);
-//       });
-////        connection.invoke('Send', message);   
-////        event.preventDefault();
-//  });
-    
- 
-//    function appendLine(line, color) {
-//        let li = document.createElement('li');
-//        li.innerText = line;
-//        document.getElementById('messages').appendChild(li);
-//    };
+
+    connection.on('Send',
+        (message) => {
+            var liElement = document.createElement('li');
+            liElement.innerHTML = message;
+            document.getElementById('messages').appendChild(liElement);
+        });
+
     connection.start();
 
 </script>

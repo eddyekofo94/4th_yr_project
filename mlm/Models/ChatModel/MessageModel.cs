@@ -1,4 +1,4 @@
-﻿  using System;
+﻿using System;
 using System.Globalization;
 using System.IO;
 using System.Net;
@@ -9,6 +9,9 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Translate.v2;
 using mlm.Controllers;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace mlm.Models.ChatModel
 {
@@ -16,76 +19,82 @@ namespace mlm.Models.ChatModel
 //    {
 //        
 //    }
-  
 
-namespace mlm
-{
-    public class MessageModel
+
+    namespace mlm
     {
-
-        // curl -i -H "Content-Type: application/json" -d {"MessageText" : "Hello Terry this is not working"} http://localhost:5000/api/Message/
-
-        // Class constructor
-        public MessageModel(string msgIn, long timeIn)
+        public class MessageModel 
         {
-            // Date format "02:14 28-Oct-17"
-            // TODO: Date according to each region?
-            //            MessageTime = DateTime.UtcNow.ToString("HH:mm dd-MMM-yy", DateTimeFormatInfo.InvariantInfo);
-            // Translate's JavaScript's time to C#'s DateTime.
-            MessageTime = new DateTime(1970, 1, 1).AddTicks(timeIn * 10000).ToString("HH:mm ddd dd-MM-yyyy ", DateTimeFormatInfo.InvariantInfo);
-            MessageText = msgIn;
-            MessageTranslated = TranslateText(MessageText);
-        }
+            // curl -i -H "Content-Type: application/json" -d {"MessageText" : "Hello Terry this is not working"} http://localhost:5000/api/Message/
 
-        public MessageModel(string messageTime, string messageText, string messageTranslated) 
-        {
-            this.MessageTime = messageTime;
+            // Class constructor
+            public MessageModel(string msgIn)
+            {
+              
+                MessageText = msgIn;
+                MessageTranslated = TranslateText(MessageText);
+            }
+
+            public MessageModel(DateTime messageTime, string messageText, string messageTranslated)
+            {
+                this.DateCreated = messageTime;
                 this.MessageText = messageText;
                 this.MessageTranslated = messageTranslated;
-               
-        }
-                public string MessageTime { get; set; }
-        public string MessageText { get; set; }
-        public string MessageTranslated { get; set; }
-
-        // Translates the text to the desired language
-        //TODO: Change to the preffered language.
-        public static string TranslateText(string msgIn)
-        {
-
-            // If the input is null somehow, throw an exception
-            if (msgIn == null)
-            {
-                throw new ArgumentNullException();
             }
 
-            GoogleCredential credential = GoogleCredential.GetApplicationDefault();
+            [Key]
+            public Guid MessageId { get; set; }
 
-            var compute = new ComputeService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential
-            });
-            // var message = "This is some html text to <strong>translate</strong>!";
-            string targetLanguage = "fr";
-            string sourceLanguage = null; // automatically detected
-            var client = Google.Cloud.Translation.V2.TranslationClient.Create();
-            try
-            {
+            [Required]
+            [ForeignKey("User")]
+            public string UserId { get; set; }
 
-                var response = client.TranslateHtml(msgIn, targetLanguage, sourceLanguage);
-                return response.TranslatedText;
+            public ApplicationUser User { get; set; }
+
+            [Required]
+            [DataType(DataType.Date)]
+            public DateTime DateCreated { get; set; }
+
+            [Required]
+            public string MessageText { get; set; }
+
+            public string MessageTranslated { get; set; }
+
+            // Translates the text to the desired language
+            //TODO: Change to the preffered language.
+            public static string TranslateText(string msgIn)
+            {
+                // If the input is null somehow, throw an exception
+                if (msgIn == null)
+                {
+                    throw new ArgumentNullException();
+                }
+
+                GoogleCredential credential = GoogleCredential.GetApplicationDefault();
+
+                var compute = new ComputeService(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = credential
+                });
+                // var message = "This is some html text to <strong>translate</strong>!";
+                string targetLanguage = "fr";
+                string sourceLanguage = null; // automatically detected
+                var client = Google.Cloud.Translation.V2.TranslationClient.Create();
+                try
+                {
+                    var response = client.TranslateHtml(msgIn, targetLanguage, sourceLanguage);
+                    return response.TranslatedText;
+                }
+                catch (Exception ex)
+                {
+                    return "Error: \n" + ex;
+                }
             }
-            catch (Exception ex)
+
+            public override string ToString()
             {
-                return "Error: \n" + ex;
+                return string.Format("Message: {0}", MessageText);
             }
-
-        }
-
-        public override string ToString()
-        {
-            return string.Format("Message: {0}", MessageText);
         }
     }
-}
 }

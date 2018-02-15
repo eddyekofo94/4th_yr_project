@@ -15,6 +15,7 @@
   "author": "Eddy Ekofo",
   "license": "MIT",
   "dependencies": {
-    "@aspnet/signalr-client": "^1.0.0-alpha2-final"
+    "@aspnet/signalr-client": "^1.0.0-alpha2-final",
+    "jquery": "^3.3.1"
   }
 }
