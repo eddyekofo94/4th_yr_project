@@ -23,7 +23,7 @@
     let connection = new signalR.HubConnection(`http://${document.location.host}/chat`, { transport: transport });
 
     $(document).ready(function() {
-        $( "#message" ).focus();
+        $("#message").focus();    //    focuses on the text form
 
         $("#frm-send-message").submit(function() {
             var msg = $('#message').val();
@@ -32,9 +32,9 @@
                 function(data) {
                     console.log(data);
                 });
-        $("#frm-send-message").trigger("reset");
+
+            $("#frm-send-message").trigger("reset");    // ressets the form
         });
-        
 
     });
 

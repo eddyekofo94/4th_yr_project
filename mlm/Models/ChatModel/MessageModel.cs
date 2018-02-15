@@ -23,24 +23,23 @@ namespace mlm.Models.ChatModel
 
     namespace mlm
     {
-        public class MessageModel 
+        public class MessageModel
         {
             // curl -i -H "Content-Type: application/json" -d {"MessageText" : "Hello Terry this is not working"} http://localhost:5000/api/Message/
 
             // Class constructor
             public MessageModel(string msgIn)
             {
-              
                 MessageText = msgIn;
                 MessageTranslated = TranslateText(MessageText);
             }
 
-            public MessageModel(DateTime messageTime, string messageText, string messageTranslated)
-            {
-                this.DateCreated = messageTime;
-                this.MessageText = messageText;
-                this.MessageTranslated = messageTranslated;
-            }
+//            public MessageModel(DateTime messageTime, string messageText, string messageTranslated)
+//            {
+//                this.DateCreated = messageTime;
+//                this.MessageText = messageText;
+//                this.MessageTranslated = messageTranslated;
+//            }
 
             [Key]
             public Guid MessageId { get; set; }
@@ -83,6 +82,7 @@ namespace mlm.Models.ChatModel
                 try
                 {
                     var response = client.TranslateHtml(msgIn, targetLanguage, sourceLanguage);
+                    Console.WriteLine(">>>>>>>>>>>>>>> The translatad text: " + response.TranslatedText);
                     return response.TranslatedText;
                 }
                 catch (Exception ex)
