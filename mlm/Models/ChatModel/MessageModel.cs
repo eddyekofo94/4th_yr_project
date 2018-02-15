@@ -77,7 +77,7 @@ namespace mlm.Models.ChatModel
                 try
                 {
                     var response = client.TranslateHtml(msgIn, targetLanguage, sourceLanguage);
-                    Console.WriteLine(">>>>>>>>>>>>>>> The translatad text: " + response.TranslatedText);
+//                    Console.WriteLine(">>>>>>>>>>>>>>> The translatad text: " + response.TranslatedText);
                     return response.TranslatedText;
                 }
                 catch (Exception ex)

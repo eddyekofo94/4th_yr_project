@@ -41,8 +41,6 @@
 
             $.post("http://localhost:5000/api/chat/send/" + msg,
                 function(data) {
-//                    addPost(data);
-//                    addPostsList(data);
                     console.log(data);
                 });
 
@@ -69,7 +67,7 @@
                         var post = message[index];
                         console.log(post);
                     });
-                addPost(message);
+                addPost(message);    // Adds each message
             });
     });
 

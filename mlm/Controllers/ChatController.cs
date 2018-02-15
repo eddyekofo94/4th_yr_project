@@ -87,6 +87,7 @@ namespace mlm.Controllers
             List<MessageViewModel> model = new List<MessageViewModel>();
             foreach (MessageModel msg in messages)
             {
+                Console.WriteLine(msg);
                 model.Add(new MessageViewModel(msg));
             }
 
