@@ -45,13 +45,14 @@ namespace mlm.Models.ChatModel
             public Guid MessageId { get; set; }
 
             [Required]
-            [ForeignKey("User")]
+//            [ForeignKey("User")]    // SQLite does not support this
             public string UserId { get; set; }
 
             public ApplicationUser User { get; set; }
 
             [Required]
             [DataType(DataType.Date)]
+//            [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
             public DateTime DateCreated { get; set; }
 
             [Required]

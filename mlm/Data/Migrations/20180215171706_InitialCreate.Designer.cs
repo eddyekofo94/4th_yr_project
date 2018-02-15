@@ -11,7 +11,7 @@ using System;
 namespace mlm.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180215045751_InitialCreate")]
+    [Migration("20180215171706_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
