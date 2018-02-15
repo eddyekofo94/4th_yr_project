@@ -12,6 +12,8 @@
     </form>
     <div class="clear">
     </div>
+    <ul id="postsList"></ul>
+
     <ul id="messages"></ul>
 </div>
 <script src="~/js/jquery.js"></script>
@@ -23,27 +25,53 @@
     let connection = new signalR.HubConnection(`http://${document.location.host}/chat`, { transport: transport });
 
     $(document).ready(function() {
-        $("#message").focus();    //    focuses on the text form
+//        TODO: Query all the table and every user's messages
+
+//        $.ajax({
+//            url: "http://localhost:5000/api/chat/get",
+//            method: 'GET',
+//            dataType: 'JSON',
+//            success: addPostsList
+//        });
+
+        $("#message").focus(); //    focuses on the text form
 
         $("#frm-send-message").submit(function() {
             var msg = $('#message').val();
 
             $.post("http://localhost:5000/api/chat/send/" + msg,
                 function(data) {
+                    addPost(data);
+//                    addPostsList(data);
                     console.log(data);
                 });
 
-            $("#frm-send-message").trigger("reset");    // ressets the form
+            $("#frm-send-message").trigger("reset"); // ressets the form
+
         });
 
+        function addPost(post) {
+            console.log('New post from server: ', post);
+            $("#messages")
+                .append('<li>' +
+                    post.author +
+                    ': ' +
+                    post.content +
+                    " Translated: " +
+                    post.contentTranslated +
+                    '</li>');
+        }
+
+        connection.on('Send',
+            (message) => {
+                $.each(message,
+                    function(index) {
+                        var post = message[index];
+                        addPost(message);
+                    });
+            });
     });
 
-    connection.on('Send',
-        (message) => {
-            var liElement = document.createElement('li');
-            liElement.innerHTML = message;
-            document.getElementById('messages').appendChild(liElement);
-        });
 
     connection.start();
 

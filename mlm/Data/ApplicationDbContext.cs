@@ -25,9 +25,9 @@ namespace mlm.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
 
-            builder.Entity<MessageModel>()
-                .Property(m => m.DateCreated)
-                .HasDefaultValueSql("strftime('%y-%m-%d %H:%M:%S)");
+//            builder.Entity<MessageModel>()
+//                .Property(m => m.DateCreated)
+//                .HasDefaultValueSql("strftime('%y-%m-%d %H:%M:%S)");
         }
     }
 }

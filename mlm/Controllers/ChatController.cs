@@ -66,18 +66,20 @@ namespace mlm.Controllers
 
             // Save the new message
             await _context.AddAsync(newMessage);
+            Console.WriteLine(newMessage.MessageText, newMessage.MessageTranslated);
             await _context.SaveChangesAsync();
 
             MessageViewModel model = new MessageViewModel(newMessage);
 
 //            Console.WriteLine("My User Name!!! " + user.Email, user.UserName, user.NormalizedEmail);
             //for a single group
-            await _hubContext.Clients.Group("MainChatRoom").InvokeAsync("Send", model);
-//            await _hubContext.Clients.All.InvokeAsync("Send", message);
-            return new NoContentResult();
+//            await _hubContext.Clients.Group("MainChatRoom").InvokeAsync("Send", model);
+            await _hubContext.Clients.All.InvokeAsync("Send", model);
+//            return new NoContentResult();
+            return Ok(model);
         }
 
-        [HttpGet, Route("[controller]")]
+        [HttpGet, Route("[action]")]
         public async Task<IActionResult> Get()
         {
             MessageModel[] messages = await _context.Message.Include(m => m.User).ToArrayAsync();

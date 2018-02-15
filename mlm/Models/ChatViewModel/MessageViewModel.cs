@@ -20,7 +20,7 @@ namespace mlm.Models.ChatViewModel
             Content = msg.MessageText;
             ContentTranslated = msg.MessageTranslated;
             Author = msg.User.UserName;
-            Timestamp = msg.DateCreated;
+//            Timestamp = msg.DateCreated;
         }
 
         [Required]
@@ -32,8 +32,8 @@ namespace mlm.Models.ChatViewModel
        
         public string Author { get; set; }    //    name of the author
 
-        [Required]
-        [DataType(DataType.Date)]
-        public DateTime Timestamp { get; set; }
+//        [Required]
+//        [DataType(DataType.Date)]
+//        public DateTime Timestamp { get; set; }
     }
 }
