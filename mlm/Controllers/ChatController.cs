@@ -32,16 +32,6 @@ namespace mlm.Controllers
 
         private Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
 
-//        [HttpPost, Route("[action]/{message}")]
-//        public void Send(string message)
-//        {
-//            if (!ModelState.IsValid)
-//            {
-//                Console.WriteLine("Eror!!!!!!!!!!1");
-//            }
-//
-//            _hubContext.Clients.All.InvokeAsync("Send", message);
-//        }
         [HttpPost, Route("[action]/{message}")]
         public async Task<IActionResult> Send(string message)
         {
@@ -54,7 +44,7 @@ namespace mlm.Controllers
             // Get the current user
             var user = await GetCurrentUserAsync();
             if (user == null) return Forbid();
-            
+
             Console.WriteLine("USER ID: " + user.Id);
             // Create a new message to save to the database
             MessageModel newMessage = new MessageModel(message)
@@ -75,7 +65,11 @@ namespace mlm.Controllers
 //            Console.WriteLine("My User Name!!! " + user.Email, user.UserName, user.NormalizedEmail);
             //for a single group
 //            await _hubContext.Clients.Group("MainChatRoom").InvokeAsync("Send", model);
-            await _hubContext.Clients.All.InvokeAsync("Send", model);
+//            await _hubContext.Clients.All.InvokeAsync("Send", model);
+            //for a single group
+            await _hubContext.Clients.Group("groupName").InvokeAsync("Send", model);
+            //for a single client
+//            await _hubContext.Clients.Client().InvokeAsync("Send", model);
 //            return new NoContentResult();
             return Ok(model);
         }

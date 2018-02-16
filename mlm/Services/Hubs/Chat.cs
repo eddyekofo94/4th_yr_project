@@ -10,6 +10,7 @@ namespace mlm.Services.Hubs
         public override Task OnConnectedAsync()
         {
             Groups.AddAsync(Context.ConnectionId, "groupName");
+            Clients.Client(Context.ConnectionId);
 
             return base.OnConnectedAsync();
 //            return Clients.Client(Context.ConnectionId).SetConnectionId(Context.ConnectionId);

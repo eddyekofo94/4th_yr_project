@@ -12,8 +12,6 @@
     </form>
     <div class="clear">
     </div>
-    @*    <ul id="postsList"></ul>*@
-
     <ul id="messages"></ul>
 </div>
 <script src="~/js/jquery.js"></script>
@@ -67,11 +65,14 @@
                         var post = message[index];
                         console.log(post);
                     });
-                addPost(message);    // Adds each message
+                addPost(message); // Adds each message
             });
     });
 
 
-    connection.start();
+    connection.start().catch(err => {
+        console.log('connection error');
+    });
+
 
 </script>
