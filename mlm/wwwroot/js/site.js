@@ -43,20 +43,6 @@
 
         $("#messageIn").focus(); //    focuses on the text form
 
- 
-
-        function addPost(post) {
-//            console.log('New post from server: ', post);
-            $("#messages")
-                .append('<li>' +
-                    post.author +
-                    ': ' +
-                    post.content +
-                    " Translated: " +
-                    post.contentTranslated +
-                    '</li>');
-        }
-
         connection.on('Send',
             (message) => {
                 $.each(message,
@@ -64,12 +50,11 @@
                         var post = message[index];
                         console.log(post);
                     });
-                addPost(message); // Adds each message
-                newMessage()
+                // addPost(message); // Adds each message
+                newMessage(message)
             });
     });
-
-
+    
     connection.start().catch(err => {
         console.log('connection error');
     });
@@ -109,13 +94,18 @@
         $("#status-options").removeClass("active");
     });
 
-    function newMessage() {
-        let message = $("#messageIn").val();
-        console.log(message);
+    function newMessage(message) {
+        // let message = $("#messageIn").val();
+        // console.log(message);
         if ($.trim(message) == '') {
             return false;
         }
-        $('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+        $('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' +
+            message.author + ": " + message.content +
+            + " to " +
+            message.contentTranslated +
+            '</p></li>')
+            .appendTo($('.messages ul'));
         $('.message-input input').val(null);
         $('.contact.active .preview').html('<span>You: </span>' + message);
         $(".messages").animate({scrollTop: $(document).height()}, "fast");
@@ -124,17 +114,7 @@
     $('.submit').click(function () {
         newMessage();
     });
-    $(".message-input").submit(function () {
-        var msg = $('#messageIn').val();
-        console.log(msg);
-        $.post("http://localhost:5000/api/chat/send/" + msg,
-            function (data) {
-                console.log(data);
-            });
 
-        $(".message-input").trigger("reset"); // ressets the form
-
-    });
     $(window).on('keydown', function (e) {
         let message = $("#messageIn").val();
         // console.log(message);
