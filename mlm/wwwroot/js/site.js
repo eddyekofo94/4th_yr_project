@@ -54,7 +54,7 @@
                 newMessage(message)
             });
     });
-    
+
     connection.start().catch(err => {
         console.log('connection error');
     });
@@ -102,7 +102,7 @@
         }
         $('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' +
             message.author + ": " + message.content +
-            + " to " +
+            +" to " +
             message.contentTranslated +
             '</p></li>')
             .appendTo($('.messages ul'));
@@ -110,7 +110,7 @@
         $('.contact.active .preview').html('<span>You: </span>' + message);
         $(".messages").animate({scrollTop: $(document).height()}, "fast");
     };
-
+    // TODO: fix the button to it submits
     $('.submit').click(function () {
         newMessage();
     });
@@ -121,7 +121,9 @@
         if (e.which == 13) {
             $.post("http://localhost:5000/api/chat/send/" + message,
                 function (data) {
-                    console.log(data);
+                    // console.log(data);
+                    console.log(">>>>>>>>>>>>>>> Connection: " + connection.id)
+
                 });
             newMessage();
             return false;
