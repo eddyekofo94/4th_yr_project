@@ -30,7 +30,7 @@ namespace mlm.Models.ChatModel
             // Class constructor
             public MessageModel(string msgIn)
             {
-//                DateCreated = DateTime.Now;
+                DateCreated = DateTime.Now;
                 MessageText = msgIn;
                 MessageTranslated = TranslateText(MessageText);
             }
@@ -45,9 +45,9 @@ namespace mlm.Models.ChatModel
             public ApplicationUser User { get; set; }
 
 //            [Required]
-//            [DataType(DataType.Date)]
+            [DataType(DataType.Date)]
 //            [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-//            public DateTime DateCreated { get; set; }
+            public DateTime DateCreated { get; private set; }
 
             [Required]
             public string MessageText { get; set; }

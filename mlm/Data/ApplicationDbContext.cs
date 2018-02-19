@@ -24,16 +24,15 @@ namespace mlm.Data
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
-            builder.Entity<Friend>()
-                .HasOne(a => a.RequestedBy)
-                .WithMany(b => b.SentFriendRequests)
-                .HasForeignKey(c => c.RequestedById);
-
-            builder.Entity<Friend>()
-//                .HasRequired()
-                .HasOne(a => a.RequestedTo)
-                .WithMany(b => b.ReceievedFriendRequests)
-                .HasForeignKey(c => c.RequestedToId);
+//            builder.Entity<Friend>()
+//                .HasOne(a => a.RequestedBy)
+//                .WithMany(b => b.SentFriendRequests)
+//                .HasForeignKey(c => c.RequestedById);
+//
+//            builder.Entity<Friend>()
+//                .HasOne(a => a.RequestedTo)
+//                .WithMany(b => b.ReceievedFriendRequests)
+//                .HasForeignKey(c => c.RequestedToId);
         }
     }
 }
