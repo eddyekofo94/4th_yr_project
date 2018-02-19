@@ -29,7 +29,7 @@ namespace mlm.Controllers
             string username = "";
             var users = from user in _context.Users
                 select user;
-            var allUsers = _context.Users.ToListAsync();
+            var allUsers = _context.Users.ToList();
             foreach (var user in allUsers)
             {
                 username = user.UserName;
