@@ -232,7 +232,7 @@
         }
         $('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' +
             message.author + ": " + message.content +
-            +" to " +
+            " to " +
             message.contentTranslated +
             '</p></li>')
             .appendTo($('.messages ul'));
@@ -245,7 +245,7 @@
         newMessage();
     });
 
-    $(window).on('keydown', function (e) {
+    $("#messageIn").on('keydown', function (e) {
         let message = $("#messageIn").val();
         // console.log(message);
         if (e.which == 13) {
