@@ -1,33 +1,87 @@
-﻿body {
-    padding: 7em 0 7em 0;
-    /*padding-top: 7em;*/
-    overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-    font-size: 1.2em;
-    letter-spacing: 0.1px;
-    color: #32465a;
-    text-rendering: optimizeLegibility;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    -webkit-font-smoothing: antialiased;
+﻿body, html {
+    height:100%;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 3em;
-    padding-right: 3em;
+body {
+    padding-top: 70px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+/*
+ * Off Canvas sidebar at medium breakpoint
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 992px) {
+
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
+
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -33%;
+    }
+
+    .row-offcanvas-left.active {
+        left: 33%;
+        margin-left: -6px;
+    }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 33%;
+        height: 100%;
+    }
 }
+
+/*
+ * Off Canvas wider at sm breakpoint
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 34em) {
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -45%;
+    }
+
+    .row-offcanvas-left.active {
+        left: 45%;
+        margin-left: -6px;
+    }
+
+    .sidebar-offcanvas {
+        width: 45%;
+    }
+}
+
+.card {
+    overflow:hidden;
+}
+
+.card-block .rotate {
+    z-index: 8;
+    float: right;
+    height: 100%;
+}
+
+.card-block .rotate i {
+    color: rgba(20, 20, 20, 0.15);
+    position: absolute;
+    left: 0;
+    left: auto;
+    right: -10px;
+    bottom: 0;
+    display: block;
+    -webkit-transform: rotate(-44deg);
+    -moz-transform: rotate(-44deg);
+    -o-transform: rotate(-44deg);
+    -ms-transform: rotate(-44deg);
+    transform: rotate(-44deg);
+}
+
 
 /* QR code generator */
 #qrCode {
@@ -43,6 +97,8 @@
 /* change the background color */
 .navbar-custom {
     background-color: #32465a !important;
+    position: initial;
+    width: 100%;
 }
 
 /* change the brand and text color */
@@ -50,6 +106,7 @@
 .navbar-custom .navbar-text {
     color: #b8daff;
 }
+
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
     color: #b8daff !important;
@@ -61,25 +118,27 @@
 
 header {
     width: 100%;
-    height: 100vh;
+    /*height: 100vh;*/
     flex-direction: column;
     justify-content: center;
     text-align: center;
     display: flex;
+    flex-grow: 1;
     color: whitesmoke;
     background: dodgerblue;
 }
 
-header h1{
-    font-size: 7em;
-}
-
 section {
     width: 100%;
-    padding: 0;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: #E6EAEA;
+    flex-grow: 1;
 }
+
+/*#message-wrapper {*/
+    /*flex-direction: row;*/
+/*}*/
 
 @media screen and (max-width: 360px) {
     section {
