@@ -51,7 +51,8 @@ namespace mlm.Controllers
             {
                 MessageText = message,
                 UserId = user.Id,
-                User = user
+                User = user,
+//                Timestamp = 
             };
 
 

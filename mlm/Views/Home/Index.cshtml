@@ -1,11 +1,48 @@
-﻿@{
+﻿@inject UserManager<ApplicationUser> UserManager
+@inject ApplicationDbContext _context;
+@using mlm.Data
+@model mlm.Models.SearchViewModel.SearchUserViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<header class="bg-primary text-white">
-    <div class="container text-center">
-        <h1>Welcome to MLM</h1>
-        <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
-       
+<header>
+    @*    <div class="container">*@
+    <h1>Welcome to MLM</h1>
+    <div class="container">
+        <form>
+            <button type="submit" id="button1" name="button1" 
+                    formaction='@Url.Action("SearchUser", "Search")'>Search!</button>
+        </form>
     </div>
+    <form asp-controller="Search" method="get" asp-action="SearchUser">
+        <p>
+            UserName: <input type="text" name="searchString">
+            <input type="submit" value="Search"/>
+        </p>
+    </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].UserName)
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in _context.Users)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @*    @await Html.PartialAsync("SearchUser")*@
+
 </header>

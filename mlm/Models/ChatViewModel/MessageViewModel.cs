@@ -33,7 +33,7 @@ namespace mlm.Models.ChatViewModel
         public string Author { get; set; }    //    name of the author
 
 //        [Required]
-//        [DataType(DataType.Date)]
-//        public DateTime Timestamp { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime Timestamp { get; set; }
     }
 }
