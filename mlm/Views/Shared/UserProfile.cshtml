@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using mlm.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+        <a asp-area="" class="white-text name" asp-controller="Manage" asp-action="Index" title="Manage">@UserManager.GetUserName(User)</a>
+}

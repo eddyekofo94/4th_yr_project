@@ -2,10 +2,9 @@
 (function ($) {
     "use strict"; // Start of use strict
     
-    // For the side-nav
-    $('[data-toggle=offcanvas]').click(function () {
-        $('.sidebar').toggleClass('active');
-    });
+        $('.button-collapse').sideNav({
+            draggable: true, // Choose whether you can drag to open on touch screens,
+        });
 
 
 })(jQuery); // End of use strict

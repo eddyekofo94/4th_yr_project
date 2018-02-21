@@ -33,7 +33,7 @@ namespace mlm.Controllers
 
         public IActionResult Dashboard()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Dahsboard";
 
             return View();
         }

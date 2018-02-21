@@ -13,25 +13,23 @@ namespace mlm.Models
     {
 //        public ApplicationUser()
 //        {
+//            SentFriendRequests = new List<Friend>();
+//            ReceievedFriendRequests = new List<Friend>();
 //        }
-//        
-//        // user can add a profile pic
-////        public byte[] ProfilePicture { get; set; }
-//
+
+//         user can add a profile pic
+//        public byte[] ProfilePicture { get; set; }
+
 //        public virtual ICollection<Friend> SentFriendRequests { get; set; }
 //
 //        public virtual ICollection<Friend> ReceievedFriendRequests { get; set; }
-//
-//        [NotMapped]
-//        public virtual ICollection<Friend> Friends
-//        {
-//            get
-//            {
-//                var friends = SentFriendRequests.Where(x => x.Approved).ToList();
-//                friends.AddRange(ReceievedFriendRequests.Where(x => x.Approved));
-//                return friends;
-//            }
-//        }
-//        
+
+//        [NotMapped] public virtual ICollection<ApplicationUser> Friends { get; set; }
+//           get
+        //            {
+        //                var friends = SentFriendRequests.Where(x => x.Approved).ToList();
+        //                friends.AddRange(ReceievedFriendRequests.Where(x => x.Approved));
+        //                return friends;
+        //            }
     }
 }

@@ -33,7 +33,6 @@ namespace mlm.Controllers
 
             var usersResult = new SearchUserViewModel();
             usersResult.Users = await users.ToListAsync();
-            Console.WriteLine(">>>>>>>>>>User Results: ");
             return View(usersResult);
         }
     }

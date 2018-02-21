@@ -6,12 +6,16 @@
     <title>@ViewData["Title"] - MLM</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.min.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" media="screen,projection" href="~/lib/materialize-css/materialize.css">
+
+        @*        <link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.min.css"/>*@
 
         @*        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>*@
         <link rel="stylesheet" href="~/css/site.css"/>
     </environment>
     <environment exclude="Development">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"/>
@@ -20,52 +24,79 @@
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
-    <div class="flex-row d-flex">
-        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" title="Multi-lang Messenger">MLM</a>
-        <button type="button" class="navbar-toggler" data-toggle="offcanvas" title="Toggle responsive left sidebar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse" id="collapsingNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a asp-area="" class="nav-link" asp-controller="Home" asp-action="Message">Messenger</a>
+<nav class="blue navbar-fixed lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" asp-area="" asp-controller="Home" asp-action="Index" title="Multi-lang Messenger" class="brand-logo">MLM</a>
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Message">
+                    <i class="material-icons">mail</i>
+                </a>
             </li>
             <li>
-                <a asp-area="" class="nav-link" asp-controller="Home" asp-action="About">About</a>
+                <a asp-area="" asp-controller="Home" asp-action="About">
+                    <i class="material-icons">info</i>
+                </a>
             </li>
-            <li class="nav-item">
-                <a asp-area="" class="nav-link" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Dashboard">
+                    <i class="material-icons">dashboard</i>
+                </a>
+            </li>
+            @await Html.PartialAsync("_LoginPartial")
 
-                @*                <a class="nav-link" href="#myAlert" data-toggle="collapse">Alert</a>*@
-            </li>
         </ul>
-        <form asp-controller="Search" asp-action="SearchUser" method="get" class="form-inline my-2 my-lg-0">
-            <input name="searchString" class="form-control mr-sm-2" type="text" placeholder="Search users...">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        @await Html.PartialAsync("_LoginPartial")
+        @await Html.PartialAsync("_FloatingButton")
     </div>
 </nav>
-
-<section>
-    @*    <div class="container-fluid" id="main">*@
+<!-- Dropdown Structure -->
+@*<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">*@
+@*    <div class="flex-row d-flex">*@
+@*        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" title="Multi-lang Messenger">MLM</a>*@
+@*        <button type="button" class="navbar-toggler" data-toggle="offcanvas" title="Toggle responsive left sidebar">*@
+@*            <span class="navbar-toggler-icon"></span>*@
+@*        </button>*@
+@*    </div>*@
+@*    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">*@
+@*        <span class="navbar-toggler-icon"></span>*@
+@*    </button>*@
+@*    <div class="navbar-collapse collapse" id="collapsingNavbar">*@
+@*        <ul class="navbar-nav">*@
+@*            <li class="nav-item">*@
+@*                <a asp-area="" class="nav-link" asp-controller="Home" asp-action="Message">Messenger</a>*@
+@*            </li>*@
+@*            <li>*@
+@*                <a asp-area="" class="nav-link" asp-controller="Home" asp-action="About">About</a>*@
+@*            </li>*@
+@*            <li class="nav-item">*@
+@*                <a asp-area="" class="nav-link" asp-controller="Home" asp-action="Dashboard">Dashboard</a>*@
+@**@
+@*                $1$                <a class="nav-link" href="#myAlert" data-toggle="collapse">Alert</a>#1#*@
+@*            </li>*@
+@*        </ul>*@
+@*        <form asp-controller="Search" asp-action="SearchUser" method="get" class="form-inline my-2 my-lg-0">*@
+@*            <input name="searchString" class="form-control mr-sm-2" type="text" placeholder="Search users...">*@
+@*            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>*@
+@*        </form>*@
+@*        @await Html.PartialAsync("_LoginPartial")*@
+@*    </div>*@
+@*</nav>*@
+<main>
+    @await Html.PartialAsync("_SideNav")
     @RenderBody()
-    @*    </div>*@
-    <!--/.container-->
-</section>
+</main>
+
 
 <environment include="Development">
     <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/js/tether.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="~/lib/materialize-css/materialize.js"></script>
+    @*    <script src="~/js/tether.min.js"></script>*@
+    @*    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
     <script src="~/js/site.js" asp-append-version="true"></script>
 </environment>
 <environment exclude="Development">
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
             asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
             asp-fallback-test="window.jQuery"

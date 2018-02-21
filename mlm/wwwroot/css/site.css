@@ -2,125 +2,13 @@
     height:100%;
 }
 
-body {
-    padding-top: 55px;
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
 }
 
-/*
- * Off Canvas sidebar at medium breakpoint
- * --------------------------------------------------
- */
-@media screen and (max-width: 992px) {
-
-    .row-offcanvas {
-        position: relative;
-        -webkit-transition: all 0.25s ease-out;
-        -moz-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
-    }
-
-    .row-offcanvas-left
-    .sidebar-offcanvas {
-        left: -33%;
-    }
-
-    .row-offcanvas-left.active {
-        left: 33%;
-        margin-left: -6px;
-    }
-
-    .sidebar-offcanvas {
-        position: absolute;
-        top: 0;
-        width: 33%;
-        height: 100%;
-    }
-}
-
-/*
- * Off Canvas wider at sm breakpoint
- * --------------------------------------------------
- */
-
-/*
- * Sidebar
- */
-
-.sidebar {
-    /*position: fixed;*/
-    bottom: 0;
-    left: 0;
-    z-index: 100; /* Behind the navbar */
-    padding: 0;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-}
-
-.sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 50px; /* Height of navbar */
-    height: calc(100vh - 50px);
-    padding-top: .5rem;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
-
-.sidebar .nav-link {
-    font-weight: 500;
-    color: #333;
-}
-
-.sidebar .nav-link .feather {
-    margin-right: 4px;
-    color: #999;
-}
-
-.sidebar .nav-link.active {
-    color: #007bff;
-}
-
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-    color: inherit;
-}
-
-.sidebar-heading {
-    font-size: .75rem;
-    text-transform: uppercase;
-}
-
-/*Card dashboard */
-.card {
-    overflow:hidden;
-}
-
-.card-block .rotate {
-    z-index: 8;
-    float: right;
-    height: 100%;
-}
-
-.card-block .rotate i {
-    color: rgba(20, 20, 20, 0.15);
-    position: absolute;
-    left: 0;
-    left: auto;
-    right: -10px;
-    bottom: 0;
-    display: block;
-    -webkit-transform: rotate(-44deg);
-    -moz-transform: rotate(-44deg);
-    -o-transform: rotate(-44deg);
-    -ms-transform: rotate(-44deg);
-    transform: rotate(-44deg);
-}
-
-.sidebar-sticky, .sidebar-offcanvas{
-    width: 100%;
-    height: 100vh;
-    /*position: absolute;*/
-    z-index: 100;
-}
 /* QR code generator */
 #qrCode {
     margin: 15px;
@@ -131,29 +19,61 @@ body {
 
 }
 
-/*Nav-bar*/
-/* change the background color */
-.navbar-custom {
-    background-color: #248bf3 !important;
-    position: initial;
-    width: 100%;
+footer, section {
+    padding-left: 300px;
 }
 
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: #b8daff;
+#floating-button-side-menu{
+    top: 2.5em;
+    /*left: 90em;*/
+    position: fixed;
+}
+.side-nav{
+    -webkit-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+/*Big screen*/
+@media only screen and (min-width : 992px) {
+    /*So you can see the logo on big screens*/
+    #floating-button-side-menu{
+        top: 2.5em;
+        left: 90em;
+        position: fixed;
+    }
+    .side-nav {
+        
+        margin-top: 70px;
+        position: fixed;
+        -webkit-transition: .3s ease all;
+        -o-transition: .3s ease all;
+        -moz-transition: .3s ease all;
+        transition: .3s ease all;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden !important;
+        /*z-index: 1000;*/
+    }
+    nav{
+        position: fixed !important;
+        top: 0 !important;
+    }
 }
 
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: #b8daff !important;
+
+@media only screen and (max-width : 992px) {
+    section, header, main, nav, footer {
+        padding-left: 0;
+    }
 }
 
-.navbar-custom .nav-link:hover {
-    color: #ffa000 !important;
+#more-menu{
+    width: 15em;
 }
-
 header {
     width: 100%;
     height: 100vh;
@@ -167,13 +87,7 @@ header {
     background: dodgerblue;
 }
 
-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background: #E6EAEA;
-    flex-grow: 1;
-}
+
 
 #message-wrapper {
     flex-direction: row;
@@ -188,24 +102,15 @@ section {
     }
 }
 
-section #sidepanel {
-    float: left;
-    width: 100%;
-    height: 100vh;
-    color: #2594ff;
-    overflow: hidden;
-    display: block;
+section {
+    /*float: left;*/
+    /*color: #2594ff;*/
+    height: inherit;
+    overflow: scroll;
 }
 
 
-@media screen and (max-width: 735px) {
-    #sidepanel {
-        width: 58px;
-        min-width: 58px;
-    }
-}
-
-section #sidepanel #profile {
+section #profile {
     width: inherit;
     height: auto;
     margin: 25px auto;
@@ -213,24 +118,24 @@ section #sidepanel #profile {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile {
+    section #profile {
         width: 100%;
         margin: 0 auto;
         padding: 5px 0 0 0;
-        background: #248bf3;
+        /*background: #248bf3;*/
     }
 }
 
-section #sidepanel #profile.expanded .wrap {
+section #profile.expanded .wrap {
     height: 210px;
     line-height: initial;
 }
 
-section #sidepanel #profile.expanded .wrap p {
+section #profile.expanded .wrap p {
     margin-top: 20px;
 }
 
-section #sidepanel #profile.expanded .wrap i.expand-button {
+section #profile.expanded .wrap i.expand-button {
     -moz-transform: scaleY(-1);
     -o-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
@@ -239,7 +144,7 @@ section #sidepanel #profile.expanded .wrap i.expand-button {
     -ms-filter: "FlipH";
 }
 
-section #sidepanel #profile .wrap {
+section #profile .wrap {
     height: 60px;
     line-height: 60px;
     overflow: hidden;
@@ -250,12 +155,12 @@ section #sidepanel #profile .wrap {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap {
+    section #profile .wrap {
         height: 55px;
     }
 }
 
-section #sidepanel #profile .wrap img {
+section #profile .wrap img {
     width: 50px;
     border-radius: 50%;
     padding: 3px;
@@ -270,40 +175,40 @@ section #sidepanel #profile .wrap img {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap img {
+    section #profile .wrap img {
         width: 40px;
         margin-left: 4px;
     }
 }
 
-section #sidepanel #profile .wrap img.online {
+section #profile .wrap img.online {
     border: 2px solid #2ecc71;
 }
 
-section #sidepanel #profile .wrap img.away {
+section #profile .wrap img.away {
     border: 2px solid #f1c40f;
 }
 
-section #sidepanel #profile .wrap img.busy {
+section #profile .wrap img.busy {
     border: 2px solid #e74c3c;
 }
 
-section #sidepanel #profile .wrap img.offline {
+section #profile .wrap img.offline {
     border: 2px solid #95a5a6;
 }
 
-section #sidepanel #profile .wrap p {
+section #profile .wrap p {
     float: left;
     margin-left: 15px;
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap p {
+    section #profile .wrap p {
         display: none;
     }
 }
 
-section #sidepanel #profile .wrap i.expand-button {
+section #profile .wrap i.expand-button {
     float: right;
     margin-top: 23px;
     font-size: 0.8em;
@@ -312,12 +217,12 @@ section #sidepanel #profile .wrap i.expand-button {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap i.expand-button {
+    section #profile .wrap i.expand-button {
         display: none;
     }
 }
 
-section #sidepanel #profile .wrap #status-options {
+section #profile .wrap #status-options {
     position: absolute;
     opacity: 0;
     visibility: hidden;
@@ -326,7 +231,7 @@ section #sidepanel #profile .wrap #status-options {
     border-radius: 6px;
     z-index: 99;
     line-height: initial;
-    background: #248bf3;
+    /*background: #248bf3;*/
     -moz-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     -webkit-transition: 0.3s all ease;
@@ -334,25 +239,25 @@ section #sidepanel #profile .wrap #status-options {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap #status-options {
+    section #profile .wrap #status-options {
         width: 58px;
         margin-top: 57px;
     }
 }
 
-section #sidepanel #profile .wrap #status-options.active {
+section #profile .wrap #status-options.active {
     opacity: 1;
     visibility: visible;
     margin: 75px 0 0 0;
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap #status-options.active {
+    section #profile .wrap #status-options.active {
         margin-top: 62px;
     }
 }
 
-section #sidepanel #profile .wrap #status-options:before {
+section #profile .wrap #status-options:before {
     content: '';
     position: absolute;
     width: 0;
@@ -364,33 +269,33 @@ section #sidepanel #profile .wrap #status-options:before {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap #status-options:before {
+    section #profile .wrap #status-options:before {
         margin-left: 23px;
     }
 }
 
-section #sidepanel #profile .wrap #status-options ul {
+section #profile .wrap #status-options ul {
     overflow: hidden;
     border-radius: 6px;
 }
 
-section #sidepanel #profile .wrap #status-options ul li {
+section #profile .wrap #status-options ul li {
     padding: 15px 0 30px 18px;
     display: block;
     cursor: pointer;
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap #status-options ul li {
+    section #profile .wrap #status-options ul li {
         padding: 15px 0 35px 22px;
     }
 }
 
-section #sidepanel #profile .wrap #status-options ul li:hover {
-    background: #248bf3;
+section #profile .wrap #status-options ul li:hover {
+    background: none;
 }
 
-section #sidepanel #profile .wrap #status-options ul li span.status-circle {
+section #profile .wrap #status-options ul li span.status-circle {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -399,13 +304,13 @@ section #sidepanel #profile .wrap #status-options ul li span.status-circle {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap #status-options ul li span.status-circle {
+    section #profile .wrap #status-options ul li span.status-circle {
         width: 14px;
         height: 14px;
     }
 }
 
-section #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
+section #profile .wrap #status-options ul li span.status-circle:before {
     content: '';
     position: absolute;
     width: 14px;
@@ -417,68 +322,68 @@ section #sidepanel #profile .wrap #status-options ul li span.status-circle:befor
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
+    section #profile .wrap #status-options ul li span.status-circle:before {
         height: 18px;
         width: 18px;
     }
 }
 
-section #sidepanel #profile .wrap #status-options ul li p {
+section #profile .wrap #status-options ul li p {
     padding-left: 12px;
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #profile .wrap #status-options ul li p {
+    section #profile .wrap #status-options ul li p {
         display: none;
     }
 }
 
-section #sidepanel #profile .wrap #status-options ul li#status-online span.status-circle {
+section #profile .wrap #status-options ul li#status-online span.status-circle {
     background: #2ecc71;
 }
 
-section #sidepanel #profile .wrap #status-options ul li#status-online.active span.status-circle:before {
+section #profile .wrap #status-options ul li#status-online.active span.status-circle:before {
     border: 1px solid #2ecc71;
 }
 
-section #sidepanel #profile .wrap #status-options ul li#status-away span.status-circle {
+section #profile .wrap #status-options ul li#status-away span.status-circle {
     background: #f1c40f;
 }
 
-section #sidepanel #profile .wrap #status-options ul li#status-away.active span.status-circle:before {
+section #profile .wrap #status-options ul li#status-away.active span.status-circle:before {
     border: 1px solid #f1c40f;
 }
 
-section #sidepanel #profile .wrap #status-options ul li#status-busy span.status-circle {
+section #profile .wrap #status-options ul li#status-busy span.status-circle {
     background: #e74c3c;
 }
 
-section #sidepanel #profile .wrap #status-options ul li#status-busy.active span.status-circle:before {
+section #profile .wrap #status-options ul li#status-busy.active span.status-circle:before {
     border: 1px solid #e74c3c;
 }
 
-section #sidepanel #profile .wrap #status-options ul li#status-offline span.status-circle {
+section #profile .wrap #status-options ul li#status-offline span.status-circle {
     background: #95a5a6;
 }
 
-section #sidepanel #profile .wrap #status-options ul li#status-offline.active span.status-circle:before {
+section #profile .wrap #status-options ul li#status-offline.active span.status-circle:before {
     border: 1px solid #95a5a6;
 }
 
-section #sidepanel #profile .wrap #expanded {
+section #profile .wrap #expanded {
     padding: 100px 0 0 0;
     display: block;
     line-height: initial !important;
 }
 
-section #sidepanel #profile .wrap #expanded label {
+section #profile .wrap #expanded label {
     float: left;
     clear: both;
     margin: 0 8px 5px 0;
     padding: 5px 0;
 }
 
-section #sidepanel #profile .wrap #expanded input {
+section #profile .wrap #expanded input {
     border: none;
     margin-bottom: 6px;
     background: #248bf3;
@@ -488,46 +393,47 @@ section #sidepanel #profile .wrap #expanded input {
     width: calc(100% - 43px);
 }
 
-section #sidepanel #profile .wrap #expanded input:focus {
+section #profile .wrap #expanded input:focus {
     outline: none;
-    background: #248bf3;
+    /*background: #248bf3;*/
 }
 
 
-section #sidepanel #contacts {
+section #contacts {
     height: calc(100% - 177px);
     overflow-y: scroll;
     overflow-x: hidden;
+    /*clear: top;*/
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #contacts {
+    section  #contacts {
         height: calc(100% - 149px);
         overflow-y: scroll;
         overflow-x: hidden;
     }
 
-    section #sidepanel #contacts::-webkit-scrollbar {
+    section #contacts::-webkit-scrollbar {
         display: none;
     }
 }
 
-section #sidepanel #contacts.expanded {
+section #contacts.expanded {
     height: calc(100% - 334px);
 }
 
-/*section #sidepanel #contacts::-webkit-scrollbar {*/
+/*section #contacts::-webkit-scrollbar {*/
     /*width: 8px;*/
     /*background: #292d3e;*/
 /*}*/
 
-/*section #sidepanel #contacts::-webkit-scrollbar-thumb {*/
+/*section #contacts::-webkit-scrollbar-thumb {*/
     /*background-color: #243140;*/
 /*}*/
-section #sidepanel #contacts ul{
+section #contacts ul{
     width:inherit;
 }
-section #sidepanel #contacts ul li.contact {
+section #contacts ul li.contact {
     position: relative;
     width: 100%;
     padding: 10px 0 15px 0;
@@ -536,45 +442,45 @@ section #sidepanel #contacts ul li.contact {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #contacts ul li.contact {
+    section #contacts ul li.contact {
         padding: 6px 0 46px 8px;
     }
 }
 
-section #sidepanel #contacts ul li.contact:hover {
-    background: #248bf3;
+section #contacts ul li.contact:hover {
+    /*background: none;*/
     color: whitesmoke;
 }
 
-section #sidepanel #contacts ul li.contact.active {
-    background: #2594ff;
+section #contacts ul li.contact.active {
+    background: rgba(255, 255, 255, 0.4);
     border-right: 5px solid #66bb6a;
-    color: #f5f5f5 !important;
+    color: #ffffff !important;
 }
 
-section #sidepanel #contacts ul li.contact.active:hover {
-    background: #2594ff;
+section #contacts ul li.contact.active:hover {
+    background: rgba(37, 148, 255, 0.46);
     border-right: 5px solid #8dfc92;
     color: #ffffff !important;
 }
 
-section #sidepanel #contacts ul li.contact.active span.contact-status {
-    border: 2px solid #248bf3 !important;
+section #contacts ul li.contact.active span.contact-status {
+    border: 2px solid #ffffff !important;
 }
 
-section #sidepanel #contacts ul li.contact .wrap {
+section #contacts ul li.contact .wrap {
     width: 88%;
     margin: 0 auto;
     position: relative;
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #contacts ul li.contact .wrap {
+    section #contacts ul li.contact .wrap {
         width: 100%;
     }
 }
 
-section #sidepanel #contacts ul li.contact .wrap span {
+section #contacts ul li.contact .wrap span {
     position: absolute;
     left: 0;
     margin: -2px 0 0 -2px;
@@ -585,19 +491,19 @@ section #sidepanel #contacts ul li.contact .wrap span {
     background: #95a5a6;
 }
 
-section #sidepanel #contacts ul li.contact .wrap span.online {
+section #contacts ul li.contact .wrap span.online {
     background: #2ecc71;
 }
 
-section #sidepanel #contacts ul li.contact .wrap span.away {
+section #contacts ul li.contact .wrap span.away {
     background: #f1c40f;
 }
 
-section #sidepanel #contacts ul li.contact .wrap span.busy {
+section #contacts ul li.contact .wrap span.busy {
     background: #e74c3c;
 }
 
-section #sidepanel #contacts ul li.contact .wrap img {
+section #contacts ul li.contact .wrap img {
     width: 40px;
     border-radius: 50%;
     float: left;
@@ -605,26 +511,26 @@ section #sidepanel #contacts ul li.contact .wrap img {
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #contacts ul li.contact .wrap img {
+    section #contacts ul li.contact .wrap img {
         margin-right: 0px;
     }
 }
 
-section #sidepanel #contacts ul li.contact .wrap .meta {
+section #contacts ul li.contact .wrap .meta {
     padding: 5px 0 0 0;
 }
 
 @media screen and (max-width: 735px) {
-    section #sidepanel #contacts ul li.contact .wrap .meta {
+    section #contacts ul li.contact .wrap .meta {
         display: none;
     }
 }
 
-section #sidepanel #contacts ul li.contact .wrap .meta .name {
+section #contacts ul li.contact .wrap .meta .name {
     font-weight: 600;
 }
 
-section #sidepanel #contacts ul li.contact .wrap .meta .preview {
+section #contacts ul li.contact .wrap .meta .preview {
     margin: 5px 0 0 0;
     padding: 0 0 1px;
     font-weight: 400;
@@ -637,7 +543,7 @@ section #sidepanel #contacts ul li.contact .wrap .meta .preview {
     transition: 1s all ease;
 }
 
-section #sidepanel #contacts ul li.contact .wrap .meta .preview span {
+section #contacts ul li.contact .wrap .meta .preview span {
     position: initial;
     border-radius: initial;
     background: none;
@@ -647,68 +553,6 @@ section #sidepanel #contacts ul li.contact .wrap .meta .preview span {
     opacity: .5;
 }
 
-section #sidepanel #bottom-bar {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-section #sidepanel #bottom-bar button {
-    float: left;
-    border: none;
-    width: 50%;
-    margin: -5%;
-    padding: 10px 0;
-    background: #248bf3;
-    color: #f5f5f5;
-    cursor: pointer;
-    font-size: 0.85em;
-    font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-}
-
-@media screen and (max-width: 735px) {
-    section #sidepanel #bottom-bar button {
-        float: none;
-        width: 100%;
-        padding: 15px 0;
-    }
-}
-
-section #sidepanel #bottom-bar button:focus {
-    outline: none;
-}
-
-section #sidepanel #bottom-bar button:nth-child(1) {
-    border-right: 1px solid #2c3e50;
-}
-
-@media screen and (max-width: 735px) {
-    section #sidepanel #bottom-bar button:nth-child(1) {
-        border-right: none;
-        border-bottom: 1px solid #2c3e50;
-    }
-}
-
-section #sidepanel #bottom-bar button:hover {
-    background: #435f7a;
-}
-
-section #sidepanel #bottom-bar button i {
-    margin-right: 3px;
-    font-size: 1em;
-}
-
-@media screen and (max-width: 735px) {
-    section #sidepanel #bottom-bar button i {
-        font-size: 1.3em;
-    }
-}
-
-@media screen and (max-width: 735px) {
-    section #sidepanel #bottom-bar button span {
-        display: none;
-    }
-}
 
 section .content .contact-profile {
     /*width: 100%;*/
@@ -780,24 +624,29 @@ section .content .messages ul li {
 section .content .messages ul li:nth-last-child(1) {
     margin-bottom: 20px;
 }
-
+section .content .messages ul li.sent,
+section .content .messages ul li.replies
+{
+    font-size: 1em;
+}
 section .content .messages ul li.sent img {
     margin: 6px 8px 0 0;
+    float: right;
 }
 
 section .content .messages ul li.sent p {
-    background: #2196f3;
-    color: #f5f5f5;
+    background: #f5f5f5;
+    float: right;
 }
 
 section .content .messages ul li.replies img {
-    float: right;
+    float: left;
     margin: 6px 0 0 8px;
 }
 
 section .content .messages ul li.replies p {
-    background: #f5f5f5;
-    float: right;
+      background: #2196f3;
+    color: #f5f5f5;
 }
 
 section .content .messages ul li img {
@@ -823,8 +672,10 @@ section .content .messages ul li p {
 section .content .message-input {
     position: inherit;
     bottom: 0;
+    font-size: 1.5em;
     width: 100%;
     z-index: 99;
+    
 }
 
 section .content .message-input .wrap {
@@ -837,7 +688,7 @@ section .content .message-input .wrap input {
     width: calc(100% - 90px);
     padding: 11px 32px 10px 8px;
     font-size: 0.8em;
-    color: #248bf3;
+    color: #101112;
 }
 
 @media screen and (max-width: 735px) {
@@ -846,31 +697,31 @@ section .content .message-input .wrap input {
     }
 }
 
-section .content .message-input .wrap input:focus {
-    outline: none;
-}
+/*section .content .message-input .wrap input:focus {*/
+    /*outline: none;*/
+/*}*/
 
-section .content .message-input .wrap .attachment {
-    position: absolute;
-    right: 60px;
-    z-index: 4;
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #2196f3;
-    opacity: .5;
-    cursor: pointer;
-}
+/*section .content .message-input .wrap .attachment {*/
+    /*position: absolute;*/
+    /*right: 60px;*/
+    /*z-index: 4;*/
+    /*margin-top: 10px;*/
+    /*font-size: 1.1em;*/
+    /*color: #2196f3;*/
+    /*opacity: .5;*/
+    /*cursor: pointer;*/
+/*}*/
 
-@media screen and (max-width: 735px) {
-    section .content .message-input .wrap .attachment {
-        margin-top: 17px;
-        right: 65px;
-    }
-}
+/*@media screen and (max-width: 735px) {*/
+    /*section .content .message-input .wrap .attachment {*/
+        /*margin-top: 17px;*/
+        /*right: 65px;*/
+    /*}*/
+/*}*/
 
-section .content .message-input .wrap .attachment:hover {
-    opacity: 1;
-}
+/*section .content .message-input .wrap .attachment:hover {*/
+    /*opacity: 1;*/
+/*}*/
 
 section .content .message-input .wrap button {
     float: right;
@@ -889,7 +740,7 @@ section .content .message-input .wrap button {
 }
 
 section .content .message-input .wrap button:hover {
-    background: #435f7a;
+    background: rgba(189, 189, 189, 0.81);
 }
 
 section .content .message-input .wrap button:focus {

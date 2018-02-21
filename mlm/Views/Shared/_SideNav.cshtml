@@ -1,0 +1,139 @@
+﻿@*@model TModel*@
+<section>
+    <ul id="slide-out" class="side-nav fixed">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="https://placeimg.com/640/480/nature">
+                </div>
+                <a href="#!user"><img class="circle"  src="http://emilcarlsson.se/assets/mikeross.png"></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                @await Html.PartialAsync("UserProfile")
+            </div>
+        </li>
+        <div id="contacts">
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <img  src="http://emilcarlsson.se/assets/rachelzane.png" alt="" class="circle">
+                    <span class="title">Title</span>
+                    <p>
+                        First Line <br>
+                        Second Line
+                    </p>
+                </li>
+                <li class="collection-item avatar">
+                    <img  src="http://emilcarlsson.se/assets/louislitt.png" alt="" class="circle">
+                    <span class="title">Title</span>
+                    <p>
+                        First Line <br>
+                        Second Line
+                    </p>
+                </li>
+                <li class="collection-item avatar">
+                    <img  src="http://emilcarlsson.se/assets/louislitt.png" alt="" class="circle">
+                    <span class="title">Title</span>
+                    <p>
+                        First Line <br>
+                        Second Line
+                    </p>
+                </li>
+                <li class="collection-item avatar">
+                    <img  src="http://emilcarlsson.se/assets/louislitt.png" alt="" class="circle">
+                    <span class="title">Title</span>
+                    <p>
+                        First Line <br>
+                        Second Line
+                    </p>
+                </li>
+                <li class="collection-item avatar">
+                    <img  src="http://emilcarlsson.se/assets/louislitt.png" alt="" class="circle">
+                    <span class="title">Title</span>
+                    <p>
+                        First Line <br>
+                        Second Line
+                    </p>
+                </li>
+            </ul>    
+        </div>
+                @*                <div id="sidepanel">*@
+                @*                   
+@*                    <div id="profile">*@
+                @*                        <div class="wrap">*@
+                @*                            <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt=""/>*@
+                @*                            <p>Mike Ross</p>*@
+                @*                            <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>*@
+                @*                            <div id="status-options">*@
+                @*                                <ul class="nav flex-column">*@
+                @*                                    <li id="status-online" class="active">*@
+                @*                                        <span class="status-circle"></span>*@
+                @*                                        <p>Online</p>*@
+                @*                                    </li>*@
+                @*                                    <li id="status-away">*@
+                @*                                        <span class="status-circle"></span>*@
+                @*                                        <p>Away</p>*@
+                @*                                    </li>*@
+                @*                                    <li id="status-busy">*@
+                @*                                        <span class="status-circle"></span>*@
+                @*                                        <p>Busy</p>*@
+                @*                                    </li>*@
+                @*                                    <li id="status-offline">*@
+                @*                                        <span class="status-circle"></span>*@
+                @*                                        <p>Offline</p>*@
+                @*                                    </li>*@
+                @*                                </ul>*@
+                @*                            </div>*@
+                @*                            <div id="expanded">*@
+                @*                                <label for="twitter">*@
+                @*                                    <i class="fa fa-facebook fa-fw" aria-hidden="true"></i>*@
+                @*                                </label>*@
+                @*                                <input name="twitter" type="text" value="mikeross"/>*@
+                @*                                <label for="twitter">*@
+                @*                                    <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>*@
+                @*                                </label>*@
+                @*                                <input name="twitter" type="text" value="ross81"/>*@
+                @*                                <label for="twitter">*@
+                @*                                    <i class="fa fa-instagram fa-fw" aria-hidden="true"></i>*@
+                @*                                </label>*@
+                @*                                <input name="twitter" type="text" value="mike.ross"/>*@
+                @*                            </div>*@
+                @*                        </div>*@
+                @*                    </div>*@
+                @*                    <hr>*@
+                @*                    <div id="contacts">*@
+                @*                        <ul class="collection">*@
+                @*                            <li class="contact collection-item">*@
+                @*                                <div class="wrap">*@
+                @*                                    <span class="contact-status online"></span>*@
+                @*                                    <img src="http://emilcarlsson.se/assets/louislitt.png" alt=""/>*@
+                @*                                    <div class="meta">*@
+                @*                                        <p class="name">Louis Litt</p>*@
+                @*                                        <p class="preview">You just got LITT up, Mike.</p>*@
+                @*                                    </div>*@
+                @*                                </div>*@
+                @*                            </li>*@
+                @*                            <li class="contact collection-item active">*@
+                @*                                <div class="wrap">*@
+                @*                                    <span class="contact-status busy"></span>*@
+                @*                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>*@
+                @*                                    <div class="meta">*@
+                @*                                        <p class="name">Harvey Specter</p>*@
+                @*                                        <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>*@
+                @*                                    </div>*@
+                @*                                </div>*@
+                @*                            </li>*@
+                @*                            <li class="contact collection-item">*@
+                @*                                <div class="wrap">*@
+                @*                                    <span class="contact-status away"></span>*@
+                @*                                    <img src="http://emilcarlsson.se/assets/rachelzane.png" alt=""/>*@
+                @*                                    <div class="meta">*@
+                @*                                        <p class="name">Rachel Zane</p>*@
+                @*                                        <p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>*@
+                @*                                    </div>*@
+                @*                                </div>*@
+                @*                            </li>*@
+                @*                        </ul>*@
+                @*                    </div>*@
+                @*                </div>*@
+            
+    </ul>
+</section>
