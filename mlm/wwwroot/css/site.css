@@ -3,7 +3,7 @@
 }
 
 body {
-    padding-top: 70px;
+    padding-top: 55px;
 }
 
 /*
@@ -41,22 +41,55 @@ body {
  * Off Canvas wider at sm breakpoint
  * --------------------------------------------------
  */
-@media screen and (max-width: 34em) {
-    .row-offcanvas-left
-    .sidebar-offcanvas {
-        left: -45%;
-    }
 
-    .row-offcanvas-left.active {
-        left: 45%;
-        margin-left: -6px;
-    }
+/*
+ * Sidebar
+ */
 
-    .sidebar-offcanvas {
-        width: 45%;
-    }
+.sidebar {
+    /*position: fixed;*/
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px; /* Height of navbar */
+    height: calc(100vh - 50px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/*Card dashboard */
 .card {
     overflow:hidden;
 }
@@ -82,7 +115,12 @@ body {
     transform: rotate(-44deg);
 }
 
-
+.sidebar-sticky, .sidebar-offcanvas{
+    width: 100%;
+    height: 100vh;
+    /*position: absolute;*/
+    z-index: 100;
+}
 /* QR code generator */
 #qrCode {
     margin: 15px;
@@ -96,7 +134,7 @@ body {
 /*Nav-bar*/
 /* change the background color */
 .navbar-custom {
-    background-color: #32465a !important;
+    background-color: #248bf3 !important;
     position: initial;
     width: 100%;
 }
@@ -118,7 +156,8 @@ body {
 
 header {
     width: 100%;
-    /*height: 100vh;*/
+    height: 100vh;
+    overflow: hidden;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -136,9 +175,11 @@ section {
     flex-grow: 1;
 }
 
-/*#message-wrapper {*/
-    /*flex-direction: row;*/
-/*}*/
+#message-wrapper {
+    flex-direction: row;
+    /*height: 100vh;*/
+    /*position: inherit;*/
+}
 
 @media screen and (max-width: 360px) {
     section {
@@ -149,15 +190,13 @@ section {
 
 section #sidepanel {
     float: left;
-    min-width: 280px;
-    max-width: 340px;
-    width: 40%;
-    height: 100%;
-    background: #2c3e50;
-    color: #f5f5f5;
+    width: 100%;
+    height: 100vh;
+    color: #2594ff;
     overflow: hidden;
-    position: relative;
+    display: block;
 }
+
 
 @media screen and (max-width: 735px) {
     #sidepanel {
@@ -167,8 +206,10 @@ section #sidepanel {
 }
 
 section #sidepanel #profile {
-    width: 80%;
+    width: inherit;
+    height: auto;
     margin: 25px auto;
+    /*background: #b8daff;*/
 }
 
 @media screen and (max-width: 735px) {
@@ -176,7 +217,7 @@ section #sidepanel #profile {
         width: 100%;
         margin: 0 auto;
         padding: 5px 0 0 0;
-        background: #32465a;
+        background: #248bf3;
     }
 }
 
@@ -267,7 +308,7 @@ section #sidepanel #profile .wrap i.expand-button {
     margin-top: 23px;
     font-size: 0.8em;
     cursor: pointer;
-    color: #435f7a;
+    color: #248bf3;
 }
 
 @media screen and (max-width: 735px) {
@@ -285,7 +326,7 @@ section #sidepanel #profile .wrap #status-options {
     border-radius: 6px;
     z-index: 99;
     line-height: initial;
-    background: #435f7a;
+    background: #248bf3;
     -moz-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     -webkit-transition: 0.3s all ease;
@@ -346,7 +387,7 @@ section #sidepanel #profile .wrap #status-options ul li {
 }
 
 section #sidepanel #profile .wrap #status-options ul li:hover {
-    background: #496886;
+    background: #248bf3;
 }
 
 section #sidepanel #profile .wrap #status-options ul li span.status-circle {
@@ -440,7 +481,7 @@ section #sidepanel #profile .wrap #expanded label {
 section #sidepanel #profile .wrap #expanded input {
     border: none;
     margin-bottom: 6px;
-    background: #32465a;
+    background: #248bf3;
     border-radius: 3px;
     color: #f5f5f5;
     padding: 7px;
@@ -449,55 +490,9 @@ section #sidepanel #profile .wrap #expanded input {
 
 section #sidepanel #profile .wrap #expanded input:focus {
     outline: none;
-    background: #435f7a;
+    background: #248bf3;
 }
 
-section #sidepanel #search {
-    border-top: 1px solid #32465a;
-    border-bottom: 1px solid #32465a;
-    font-weight: 300;
-}
-
-@media screen and (max-width: 735px) {
-    section #sidepanel #search {
-        display: none;
-    }
-}
-
-section #sidepanel #search label {
-    position: absolute;
-    margin: 10px 0 0 20px;
-}
-
-section #sidepanel #search input {
-    font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-    padding: 10px 0 10px 46px;
-    width: calc(100% - 25px);
-    border: none;
-    background: #32465a;
-    color: #f5f5f5;
-}
-
-section #sidepanel #search input:focus {
-    outline: none;
-    background: #435f7a;
-}
-
-section #sidepanel #search input::-webkit-input-placeholder {
-    color: #f5f5f5;
-}
-
-section #sidepanel #search input::-moz-placeholder {
-    color: #f5f5f5;
-}
-
-section #sidepanel #search input:-ms-input-placeholder {
-    color: #f5f5f5;
-}
-
-section #sidepanel #search input:-moz-placeholder {
-    color: #f5f5f5;
-}
 
 section #sidepanel #contacts {
     height: calc(100% - 177px);
@@ -521,17 +516,20 @@ section #sidepanel #contacts.expanded {
     height: calc(100% - 334px);
 }
 
-section #sidepanel #contacts::-webkit-scrollbar {
-    width: 8px;
-    background: #2c3e50;
-}
+/*section #sidepanel #contacts::-webkit-scrollbar {*/
+    /*width: 8px;*/
+    /*background: #292d3e;*/
+/*}*/
 
-section #sidepanel #contacts::-webkit-scrollbar-thumb {
-    background-color: #243140;
+/*section #sidepanel #contacts::-webkit-scrollbar-thumb {*/
+    /*background-color: #243140;*/
+/*}*/
+section #sidepanel #contacts ul{
+    width:inherit;
 }
-
 section #sidepanel #contacts ul li.contact {
     position: relative;
+    width: 100%;
     padding: 10px 0 15px 0;
     font-size: 0.9em;
     cursor: pointer;
@@ -544,16 +542,24 @@ section #sidepanel #contacts ul li.contact {
 }
 
 section #sidepanel #contacts ul li.contact:hover {
-    background: #32465a;
+    background: #248bf3;
+    color: whitesmoke;
 }
 
 section #sidepanel #contacts ul li.contact.active {
-    background: #32465a;
-    border-right: 5px solid #435f7a;
+    background: #2594ff;
+    border-right: 5px solid #66bb6a;
+    color: #f5f5f5 !important;
+}
+
+section #sidepanel #contacts ul li.contact.active:hover {
+    background: #2594ff;
+    border-right: 5px solid #8dfc92;
+    color: #ffffff !important;
 }
 
 section #sidepanel #contacts ul li.contact.active span.contact-status {
-    border: 2px solid #32465a !important;
+    border: 2px solid #248bf3 !important;
 }
 
 section #sidepanel #contacts ul li.contact .wrap {
@@ -575,7 +581,7 @@ section #sidepanel #contacts ul li.contact .wrap span {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 2px solid #2c3e50;
+    border: 1px solid #ffffff;
     background: #95a5a6;
 }
 
@@ -651,8 +657,9 @@ section #sidepanel #bottom-bar button {
     float: left;
     border: none;
     width: 50%;
+    margin: -5%;
     padding: 10px 0;
-    background: #32465a;
+    background: #248bf3;
     color: #f5f5f5;
     cursor: pointer;
     font-size: 0.85em;
@@ -703,29 +710,8 @@ section #sidepanel #bottom-bar button i {
     }
 }
 
-section .content {
-    float: right;
-    width: 60%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-@media screen and (max-width: 735px) {
-    section .content {
-        width: calc(100% - 58px);
-        min-width: 300px !important;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    section .content {
-        width: calc(100% - 340px);
-    }
-}
-
 section .content .contact-profile {
-    width: 100%;
+    /*width: 100%;*/
     height: 60px;
     line-height: 60px;
     background: #f5f5f5;
@@ -759,13 +745,13 @@ section .content .contact-profile .social-media i:hover {
     color: #435f7a;
 }
 
-section .content .messages {
-    height: auto;
-    min-height: calc(100% - 93px);
-    max-height: calc(100% - 93px);
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
+/*section .content .messages {*/
+    /*!*height: auto;*!*/
+    /*min-height: calc(100% - 93px);*/
+    /*max-height: calc(100% - 93px);*/
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+/*}*/
 
 @media screen and (max-width: 735px) {
     section .content .messages {
@@ -800,7 +786,7 @@ section .content .messages ul li.sent img {
 }
 
 section .content .messages ul li.sent p {
-    background: #435f7a;
+    background: #2196f3;
     color: #f5f5f5;
 }
 
@@ -835,7 +821,7 @@ section .content .messages ul li p {
 }
 
 section .content .message-input {
-    position: absolute;
+    position: inherit;
     bottom: 0;
     width: 100%;
     z-index: 99;
@@ -846,13 +832,12 @@ section .content .message-input .wrap {
 }
 
 section .content .message-input .wrap input {
-    font-family: "proxima-nova", "Source Sans Pro", sans-serif;
     float: left;
     border: none;
     width: calc(100% - 90px);
     padding: 11px 32px 10px 8px;
     font-size: 0.8em;
-    color: #32465a;
+    color: #248bf3;
 }
 
 @media screen and (max-width: 735px) {
@@ -871,7 +856,7 @@ section .content .message-input .wrap .attachment {
     z-index: 4;
     margin-top: 10px;
     font-size: 1.1em;
-    color: #435f7a;
+    color: #2196f3;
     opacity: .5;
     cursor: pointer;
 }
@@ -893,7 +878,7 @@ section .content .message-input .wrap button {
     width: 50px;
     padding: 12px 0;
     cursor: pointer;
-    background: #32465a;
+    background: #2196f3;
     color: #f5f5f5;
 }
 

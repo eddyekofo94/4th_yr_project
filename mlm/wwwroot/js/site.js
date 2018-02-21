@@ -4,7 +4,7 @@
     
     // For the side-nav
     $('[data-toggle=offcanvas]').click(function () {
-        $('.row-offcanvas').toggleClass('active');
+        $('.sidebar').toggleClass('active');
     });
 
 

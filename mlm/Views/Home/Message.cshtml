@@ -4,105 +4,103 @@
 @{
     ViewData["Title"] = "Message";
 }
-<div id="message-wrapper">
-    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-    <div class="row">
-        <div class="col-2 col-md-2 bg-danger">
-            <div id="sidepanel" class="container">
-                <div id="profile">
-                    <div class="wrap">
-                        <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt=""/>
-                        <p>Mike Ross</p>
-                        <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
-                        <div id="status-options">
-                            <ul>
-                                <li id="status-online" class="active">
-                                    <span class="status-circle"></span>
-                                    <p>Online</p>
-                                </li>
-                                <li id="status-away">
-                                    <span class="status-circle"></span>
-                                    <p>Away</p>
-                                </li>
-                                <li id="status-busy">
-                                    <span class="status-circle"></span>
-                                    <p>Busy</p>
-                                </li>
-                                <li id="status-offline">
-                                    <span class="status-circle"></span>
-                                    <p>Offline</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="expanded">
-                            <label for="twitter">
-                                <i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
-                            </label>
-                            <input name="twitter" type="text" value="mikeross"/>
-                            <label for="twitter">
-                                <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
-                            </label>
-                            <input name="twitter" type="text" value="ross81"/>
-                            <label for="twitter">
-                                <i class="fa fa-instagram fa-fw" aria-hidden="true"></i>
-                            </label>
-                            <input name="twitter" type="text" value="mike.ross"/>
+<div class="container-fluid" id="main">
+    <div class="row navbar-expand-md">
+        <nav class="col-md-3 col-lg-2 bg-light navbar-collapse collapse sidebar" id="sidenav">
+            <div class="sidebar-sticky flex-column w-100 mt-1">
+                <div id="sidepanel">
+                    <div id="profile">
+                        <div class="wrap">
+                            <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt=""/>
+                            <p>Mike Ross</p>
+                            <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                            <div id="status-options">
+                                <ul class="nav flex-column">
+                                    <li id="status-online" class="active">
+                                        <span class="status-circle"></span>
+                                        <p>Online</p>
+                                    </li>
+                                    <li id="status-away">
+                                        <span class="status-circle"></span>
+                                        <p>Away</p>
+                                    </li>
+                                    <li id="status-busy">
+                                        <span class="status-circle"></span>
+                                        <p>Busy</p>
+                                    </li>
+                                    <li id="status-offline">
+                                        <span class="status-circle"></span>
+                                        <p>Offline</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="expanded">
+                                <label for="twitter">
+                                    <i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
+                                </label>
+                                <input name="twitter" type="text" value="mikeross"/>
+                                <label for="twitter">
+                                    <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
+                                </label>
+                                <input name="twitter" type="text" value="ross81"/>
+                                <label for="twitter">
+                                    <i class="fa fa-instagram fa-fw" aria-hidden="true"></i>
+                                </label>
+                                <input name="twitter" type="text" value="mike.ross"/>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="search">
-                    <label for="">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </label>
-                    <input type="text" placeholder="Search contacts..."/>
-                </div>
-                <div id="contacts">
-                    <ul>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status online"></span>
-                                <img src="http://emilcarlsson.se/assets/louislitt.png" alt=""/>
-                                <div class="meta">
-                                    <p class="name">Louis Litt</p>
-                                    <p class="preview">You just got LITT up, Mike.</p>
+                    <hr></hr>
+                    <div id="contacts">
+                        <ul class="nav flex-column">
+                            <li class="contact nav-item">
+                                <div class="wrap">
+                                    <span class="contact-status online"></span>
+                                    <img src="http://emilcarlsson.se/assets/louislitt.png" alt=""/>
+                                    <div class="meta">
+                                        <p class="name">Louis Litt</p>
+                                        <p class="preview">You just got LITT up, Mike.</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="contact active">
-                            <div class="wrap">
-                                <span class="contact-status busy"></span>
-                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
-                                <div class="meta">
-                                    <p class="name">Harvey Specter</p>
-                                    <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                            </li>
+                            <li class="contact active">
+                                <div class="wrap">
+                                    <span class="contact-status busy"></span>
+                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
+                                    <div class="meta">
+                                        <p class="name">Harvey Specter</p>
+                                        <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status away"></span>
-                                <img src="http://emilcarlsson.se/assets/rachelzane.png" alt=""/>
-                                <div class="meta">
-                                    <p class="name">Rachel Zane</p>
-                                    <p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status away"></span>
+                                    <img src="http://emilcarlsson.se/assets/rachelzane.png" alt=""/>
+                                    <div class="meta">
+                                        <p class="name">Rachel Zane</p>
+                                        <p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="bottom-bar">
-                    <button id="addcontact">
-                        <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span>
-                    </button>
-                    <button id="settings">
-                        <i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span>
-                    </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="bottom-bar">
+                        <button id="addcontact">
+                            <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span>
+                        </button>
+                        <button id="settings">
+                            <i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col col-md-8">
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
             <div class="content">
-                <div class="contact-profile">
+                <div class="contact-profile position-fixed w-75">
                     <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
                     <p>Harvey Specter</p>
                     <div class="social-media">
@@ -147,7 +145,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="message-input">
+                <div class="message-input position-fixed w-75">
                     <div class="wrap">
                         <input type="text" id="messageIn" placeholder="Write your message..."/>
                         <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
@@ -157,11 +155,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
+
 </div>
-
-
 <script src="~/js/jquery.js"></script>
 <script src="~/js/signalr-client-1.0.0-alpha2-final.min.js"></script>
 
@@ -180,7 +177,7 @@
 //            dataType: 'JSON',
 //            success: addPostsList
 //        });
-
+// TODO: Change this back to focus when finished
         $("#messageIn").focus(); //    focuses on the text form
 
         connection.on('Send',
@@ -235,8 +232,6 @@
     });
 
     function newMessage(message) {
-        // let message = $("#messageIn").val();
-        // console.log(message);
         if ($.trim(message) == '') {
             return false;
         }
@@ -249,7 +244,7 @@
                 '</p></li>')
             .appendTo($('.messages ul'));
         $('.message-input input').val(null);
-        $('.contact.active .preview').html('<span>You: </span>' + message);
+        $('.contact.active .preview').html('<span>You: </span>' + message.content);
         $(".messages").animate({ scrollTop: $(document).height() }, "fast");
     };
 
@@ -261,7 +256,6 @@
     $("#messageIn").on('keydown',
         function(e) {
             let message = $("#messageIn").val();
-            // console.log(message);
             if (e.which == 13) {
                 $.post("http://localhost:5000/api/chat/send/" + message,
                     function(data) {

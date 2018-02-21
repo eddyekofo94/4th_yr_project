@@ -31,7 +31,7 @@ namespace mlm.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Dashboard()
         {
             ViewData["Message"] = "Your contact page.";
 
