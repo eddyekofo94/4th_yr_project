@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using mlm.Models;
 using mlm.Models.ChatModel.mlm;
+using mlm.Models.Friendship;
 
 namespace mlm.Data
 {
@@ -17,6 +18,8 @@ namespace mlm.Data
         }
 
         public DbSet<MessageModel> Message { get; set; }
+
+        public DbSet<Friends> Friendship { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

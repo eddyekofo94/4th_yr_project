@@ -19,8 +19,10 @@
 
 }
 
-footer, section {
+section {
     padding-left: 300px;
+    padding-top: 3em;
+    /*clear: both;*/
 }
 
 #floating-button-side-menu{
@@ -403,7 +405,6 @@ section #contacts {
     height: calc(100% - 177px);
     overflow-y: scroll;
     overflow-x: hidden;
-    /*clear: top;*/
 }
 
 @media screen and (max-width: 735px) {

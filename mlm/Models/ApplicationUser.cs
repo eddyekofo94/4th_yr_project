@@ -24,7 +24,6 @@ namespace mlm.Models
 //
 //        public virtual ICollection<Friend> ReceievedFriendRequests { get; set; }
 
-//        [NotMapped] public virtual ICollection<ApplicationUser> Friends { get; set; }
 //           get
         //            {
         //                var friends = SentFriendRequests.Where(x => x.Approved).ToList();

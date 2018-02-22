@@ -31,6 +31,11 @@ namespace mlm.Controllers
                 users = users.Where(u => u.Email.Contains(searchString));
             }
 
+            foreach (var user in users)
+            {
+                Console.WriteLine(">>>>>>>>>>>>>>>>>> " + user);
+            }
+
             var usersResult = new SearchUserViewModel();
             usersResult.Users = await users.ToListAsync();
             return View(usersResult);

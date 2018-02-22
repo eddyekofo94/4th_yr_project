@@ -6,7 +6,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Users[0].Email)
             </th>
-            <th></th>
+            <th>
+                #
+            </th>
+
         </tr>
         </thead>
         <tbody>
@@ -18,7 +21,14 @@
                 </td>
 
                 <td>
-                    Add as friend
+                    @using (Html.BeginForm("AddFriend", "Friends", FormMethod.Post))
+                    {
+@*                        @Html.Hidden("", item.Email)*@
+                        <button asp-controller="Friends" asp-action="AddFriend" asp-route-item="@item.Email"
+                                class="btn-floating waves-effect waves-light red">
+                            <i class="material-icons">add</i>
+                        </button>
+                    }
                 </td>
             </tr>
         }

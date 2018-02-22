@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -6,33 +7,14 @@ namespace mlm.Models.Friendship
 {
     public class Friends : ApplicationUser
     {
-//        [Key, Column(Order = 0)]
-//        public int RequestedById { get; set; } 
-//        [Key, Column(Order = 1)]
-//        public int RequestedToId { get; set; } 
-//        public virtual ApplicationUser RequestedBy { get; set; }
-//        public virtual ApplicationUser RequestedTo { get; set; }
-//
-//        public DateTime? RequestTime { get; set; }
-//
-//        public DateTime? BecameFriendsTime { get; set; }
-//
-//        public FriendRequestFlag FriendRequestFlag { get; set; }
-//
-//        [NotMapped]
-//        public bool Approved => FriendRequestFlag == FriendRequestFlag.Approved;
-//
-//        public void AddFriendRequest(ApplicationUser user, ApplicationUser friendUser)
-//        {
-//            var friendRequest = new Friend()
-//            {
-//                RequestedBy = user,
-//                RequestedTo = friendUser,
-//                RequestTime = DateTime.Now,
-//                FriendRequestFlag = FriendRequestFlag.None
-//            };
-//            user.SentFriendRequests.Add(friendRequest);
-//        }
+        private ICollection<ApplicationUser> _friend;
+        public virtual ICollection<ApplicationUser> Friendships 
+        { 
+            get => _friend ?? (_friend = new List<ApplicationUser>());
+            set => _friend = value;
+        }
+//        public ApplicationUser User { get; set; }
+//        [NotMapped] public virtual ICollection<string> Friendship { get; set; }
     }
 
     public enum FriendRequestFlag

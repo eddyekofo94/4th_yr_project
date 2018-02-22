@@ -195,6 +195,7 @@ ipch/
 *.VC.db
 *.VC.VC.opendb
 
+
 # Visual Studio profiler
 *.psess
 *.vsp
@@ -470,3 +471,5 @@ fabric.properties
 Docs/Keith_Quille/
 Docs/~$LA-exmpl.docx
 mlm/.gitignore
+
+mlm/appsettings.json
