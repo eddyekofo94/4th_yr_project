@@ -472,4 +472,4 @@ Docs/Keith_Quille/
 Docs/~$LA-exmpl.docx
 mlm/.gitignore
 
-mlm/appsettings.json
+./mlm/appsettings.json
