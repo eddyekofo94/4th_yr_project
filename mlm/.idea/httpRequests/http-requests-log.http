@@ -1,0 +1,24 @@
+GET http://localhost:5000/api/message
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000/api/message
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000/api/message
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000/api
+Accept: */*
+Cache-Control: no-cache
+
+###
+
