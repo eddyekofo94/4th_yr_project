@@ -1,0 +1,10 @@
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.deps.json
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.runtimeconfig.json
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.runtimeconfig.dev.json
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.dll
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.pdb
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.csproj.CoreCompileInputs.cache
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.AssemblyInfoInputs.cache
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.AssemblyInfo.cs
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.dll
+/Users/eddyekofo/Coding/WebDev/ASP.Net/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.pdb
