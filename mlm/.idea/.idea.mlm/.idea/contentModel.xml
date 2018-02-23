@@ -5,6 +5,7 @@
       <e p=".bowerrc" t="Include" />
       <e p="app.db" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="bower.json" t="Include" />
       <e p="bundleconfig.json" t="Include" />
@@ -18,17 +19,20 @@
       </e>
       <e p="Data" t="Include">
         <e p="ApplicationDbContext.cs" t="Include" />
-        <e p="Migrations" t="Include">
-          <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
-          <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
-          <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
-        </e>
+        <e p="Migrations" t="Include" />
       </e>
       <e p="Extensions" t="Include">
         <e p="EmailSenderExtensions.cs" t="Include" />
         <e p="UrlHelperExtensions.cs" t="Include" />
       </e>
       <e p="links.txt" t="Include" />
+      <e p="Migrations" t="Include">
+        <e p="20180223004219_Initial_migration.cs" t="Include" />
+        <e p="20180223004219_Initial_migration.Designer.cs" t="Include" />
+        <e p="20180223014356_Azure_DB.cs" t="Include" />
+        <e p="20180223014356_Azure_DB.Designer.cs" t="Include" />
+        <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+      </e>
       <e p="mlm.csproj" t="IncludeRecursive" />
       <e p="mlm.sln" t="IncludeFlat" />
       <e p="Models" t="Include">

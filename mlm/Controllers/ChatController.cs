@@ -115,9 +115,6 @@ namespace mlm.Controllers
 
             MessageViewModel model = new MessageViewModel(newMessage);
 
-
-            // Call the client method 'addChatMessage' on all clients in the
-            // "MainChatroom" group.
 //            _hubContext.Clients.Group("MainChatroom").InvokeAsync().
 //            this.Clients.Group("MainChatroom").AddChatMessage(model);
             //for a single group

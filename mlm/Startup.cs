@@ -29,7 +29,8 @@ namespace mlm
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("SQLServer")));    // found in app-settings
+//                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))); //SQLite
+                options.UseSqlServer(Configuration.GetConnectionString("SQLServer")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

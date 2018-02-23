@@ -15,12 +15,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace mlm.Models.ChatModel
 {
-//    public class MessageModel
-//    {
-//        
-//    }
-
-
     namespace mlm
     {
         public class MessageModel
@@ -35,8 +29,7 @@ namespace mlm.Models.ChatModel
                 MessageTranslated = TranslateText(MessageText);
             }
 
-            [Key]
-            public Guid MessageId { get; set; }
+            [Key] public Guid MessageId { get; set; }
 
             [Required]
 //            [ForeignKey("User")]    // SQLite does not support this
@@ -49,8 +42,7 @@ namespace mlm.Models.ChatModel
 //            [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
             public DateTime DateCreated { get; private set; }
 
-            [Required]
-            public string MessageText { get; set; }
+            [Required] public string MessageText { get; set; }
 
             public string MessageTranslated { get; set; }
 

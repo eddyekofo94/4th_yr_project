@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.Internal;
 using mlm.Data;
 using System;
 
-namespace mlm.Data.Migrations
+namespace mlm.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,8 @@ namespace mlm.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
+                .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -37,7 +38,8 @@ namespace mlm.Data.Migrations
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasName("RoleNameIndex");
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
                 });
@@ -141,6 +143,8 @@ namespace mlm.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<Guid?>("FriendshipId");
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
@@ -166,12 +170,15 @@ namespace mlm.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("FriendshipId");
+
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasName("UserNameIndex");
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
                 });
@@ -181,9 +188,7 @@ namespace mlm.Data.Migrations
                     b.Property<Guid>("MessageId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValueSql("strftime('%y-%m-%d %H:%M:%S)");
+                    b.Property<DateTime>("DateCreated");
 
                     b.Property<string>("MessageText")
                         .IsRequired();
@@ -198,6 +203,22 @@ namespace mlm.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Message");
+                });
+
+            modelBuilder.Entity("mlm.Models.Friendship.Friends", b =>
+                {
+                    b.Property<Guid>("FriendshipId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("FriendEmail");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("FriendshipId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Friends");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -245,12 +266,26 @@ namespace mlm.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("mlm.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("mlm.Models.Friendship.Friends")
+                        .WithMany("Friendships")
+                        .HasForeignKey("FriendshipId");
+                });
+
             modelBuilder.Entity("mlm.Models.ChatModel.mlm.MessageModel", b =>
                 {
                     b.HasOne("mlm.Models.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("mlm.Models.Friendship.Friends", b =>
+                {
+                    b.HasOne("mlm.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }
