@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using mlm.Models.Friendship;
 using Microsoft.AspNetCore.Identity;
 
 namespace mlm.Models
@@ -18,9 +19,10 @@ namespace mlm.Models
 //        }
 
 //         user can add a profile pic
-//        public byte[] ProfilePicture { get; set; }
+        public string ImgUrl { get; set; }
+        public Guid FriendshipId { get; set; }
 
-//        public virtual ICollection<Friend> SentFriendRequests { get; set; }
+        public virtual Friends Friedships { get; set; }
 //
 //        public virtual ICollection<Friend> ReceievedFriendRequests { get; set; }
 

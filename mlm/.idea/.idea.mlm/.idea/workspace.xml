@@ -2,161 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b00beb6a-9333-4be1-bebc-6e1d36a20526" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/bin/Debug/netcoreapp2.0/mlm.deps.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/bin/Debug/netcoreapp2.0/mlm.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/bin/Debug/netcoreapp2.0/mlm.pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/bin/Debug/netcoreapp2.0/mlm.runtimeconfig.dev.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/bin/Debug/netcoreapp2.0/mlm.runtimeconfig.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/acorn-dynamic-import/node_modules/acorn/bin/acorn" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/acorn-dynamic-import/node_modules/acorn/src/bin/acorn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/acorn/bin/acorn" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/ansi-html/bin/ansi-html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/atob/bin/atob.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/buffer/bin/download-node-tests.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/buffer/bin/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/buffer/bin/update-authors.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/buffer/bin/zuul-es5.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/buffer/bin/zuul-es6.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/cssesc/bin/cssesc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/csso/bin/csso" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/detect-libc/bin/detect-libc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/editorconfig/bin/editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/esprima/bin/esparse.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/esprima/bin/esvalidate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/detect-libc/bin/detect-libc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/mkdirp/bin/cmd.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/mkdirp/bin/usage.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/node-pre-gyp/bin/node-pre-gyp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/node-pre-gyp/bin/node-pre-gyp.cmd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/nopt/bin/nopt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/semver/bin/semver" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/sshpk/bin/sshpk-conv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/sshpk/bin/sshpk-sign" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/sshpk/bin/sshpk-verify" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/fsevents/node_modules/uuid/bin/uuid" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/har-validator/bin/har-validator" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/he/bin/he" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/js-beautify/js/bin/css-beautify.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/js-beautify/js/bin/html-beautify.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/js-beautify/js/bin/js-beautify.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/js-yaml/bin/js-yaml.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/jsesc/bin/jsesc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/miller-rabin/bin/miller-rabin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/mkdirp/bin/cmd.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/mkdirp/bin/usage.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/node-gyp/bin/node-gyp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/node-gyp/node_modules/semver/bin/semver" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/node-pre-gyp/bin/node-pre-gyp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/node-pre-gyp/bin/node-pre-gyp.cmd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/node-pre-gyp/node_modules/nopt/bin/nopt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/node-sass/bin/node-sass" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/nopt/bin/nopt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/regjsparser/bin/parser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/sass-graph/bin/sassgraph" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/semver/bin/semver" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/sshpk/bin/sshpk-conv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/sshpk/bin/sshpk-sign" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/sshpk/bin/sshpk-verify" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/svgo/bin/svgo" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/svgo/node_modules/esprima/bin/esparse.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/svgo/node_modules/esprima/bin/esvalidate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/svgo/node_modules/js-yaml/bin/js-yaml.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/typescript/bin/tsc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/typescript/bin/tsserver" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/uglify-js/bin/extract-props.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/uglify-js/bin/uglifyjs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/uuid/bin/uuid" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/webpack/bin/config-optimist.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/webpack/bin/config-yargs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/webpack/bin/convert-argv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/webpack/bin/webpack.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/node_modules/which/bin/which" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/Debug/netcoreapp2.0/mlm.AssemblyInfo.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/Debug/netcoreapp2.0/mlm.AssemblyInfoInputs.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/Debug/netcoreapp2.0/mlm.csproj.CoreCompileInputs.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/Debug/netcoreapp2.0/mlm.csproj.FileListAbsolute.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/Debug/netcoreapp2.0/mlm.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/Debug/netcoreapp2.0/mlm.pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/mlm.csproj.dotnetwatch.g.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/mlm.csproj.nuget.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/mlm.csproj.nuget.g.props" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/mlm.csproj.nuget.g.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/legacy_mlm/obj/project.assets.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.deps.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.runtimeconfig.dev.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/bin/Debug/netcoreapp2.0/mlm-console.runtimeconfig.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.AssemblyInfo.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.AssemblyInfoInputs.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.csproj.CoreCompileInputs.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.csproj.FileListAbsolute.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/Debug/netcoreapp2.0/mlm-console.pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/mlm-console.csproj.dotnetwatch.g.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/mlm-console.csproj.nuget.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/mlm-console.csproj.nuget.g.props" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/mlm-console.csproj.nuget.g.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm-console/obj/project.assets.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/bin/Debug/netcoreapp2.0/app.db" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/bin/Debug/netcoreapp2.0/mlm.deps.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/bin/Debug/netcoreapp2.0/mlm.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/bin/Debug/netcoreapp2.0/mlm.pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/bin/Debug/netcoreapp2.0/mlm.runtimeconfig.dev.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/bin/Debug/netcoreapp2.0/mlm.runtimeconfig.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/Debug/netcoreapp2.0/mlm.AssemblyInfo.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/Debug/netcoreapp2.0/mlm.AssemblyInfoInputs.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/Debug/netcoreapp2.0/mlm.csproj.CoreCompileInputs.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/Debug/netcoreapp2.0/mlm.csproj.FileListAbsolute.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/Debug/netcoreapp2.0/mlm.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/Debug/netcoreapp2.0/mlm.pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/mlm.csproj.dotnetwatch.g.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/mlm.csproj.nuget.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/mlm.csproj.nuget.g.props" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/mlm.csproj.nuget.g.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../legacy_code/mlm/obj/project.assets.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm-app/.idea/contentModel.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm-app/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm-app/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm-app/riderModule.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/contentModel.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/dataSources.local.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/dataSources.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/dataSources/55b289c8-cc64-4ae1-b1c7-6d7b5aa6917a/storage_v2/_src_/schema/main.uQUzAA.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/dataSources/76e4bdd5-c5ae-47ce-b559-f6bec5a25cbe.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/dataSources/76e4bdd5-c5ae-47ce-b559-f6bec5a25cbe/storage_v2/_src_/database/mlmdb.rL8yBg.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/dataSources/76e4bdd5-c5ae-47ce-b559-f6bec5a25cbe/storage_v2/_src_/database/mlmdb.rL8yBg/schema/dbo.sYMBAA.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/dataSources/dac7960f-5331-4b4d-b1f4-b75d8539d6b3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/dataSources/dac7960f-5331-4b4d-b1f4-b75d8539d6b3/storage_v2/_src_/schema/main.uQUzAA.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/riderModule.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/appsettings.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/app.db" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.deps.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.runtimeconfig.dev.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.runtimeconfig.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.AssemblyInfo.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.AssemblyInfoInputs.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.csproj.CoreCompileInputs.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.csproj.FileListAbsolute.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm[Conflict].pdb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/mlm.csproj.EntityFrameworkCore.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/mlm.csproj.dotnetwatch.g.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/mlm.csproj.nuget.cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/mlm.csproj.nuget.g.props" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/mlm.csproj.nuget.g.targets" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/project.assets.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wwwroot/lib/jQuery/dist/jquery.slim.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wwwroot/lib/jQuery/dist/jquery.slim.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/wwwroot/lib/jQuery/dist/jquery.slim.min.map" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.mlm/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Models/ApplicationUser.cs" afterPath="$PROJECT_DIR$/Models/ApplicationUser.cs" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/SearchUser.cshtml" afterPath="$PROJECT_DIR$/Views/Shared/SearchUser.cshtml" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.dll" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.dll" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.pdb" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/mlm.pdb" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.csproj.CoreCompileInputs.cache" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.dll" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.dll" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.pdb" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.0/mlm.pdb" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -175,41 +28,7 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="app.db" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mlmdb@azure" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mlmdb@azure" type="feb32156:DbDataSourceImpl" />
-        <item name="mlmdb: database" type="bdf80c8a:MssqlImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mlmdb@azure" type="feb32156:DbDataSourceImpl" />
-        <item name="mlmdb: database" type="bdf80c8a:MssqlImplModel$Database" />
-        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mlmdb@azure" type="feb32156:DbDataSourceImpl" />
-        <item name="mlmdb: database" type="bdf80c8a:MssqlImplModel$Database" />
-        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
-        <item name="Friends: table" type="a00791b9:MssqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mlmdb@azure" type="feb32156:DbDataSourceImpl" />
-        <item name="mlmdb: database" type="bdf80c8a:MssqlImplModel$Database" />
-        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
-        <item name="Message: table" type="a00791b9:MssqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileColors">
@@ -274,6 +93,22 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="ApplicationUser.cs" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Models/ApplicationUser.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="247">
+                  <caret line="25" column="2" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+                  <folding>
+                    <marker date="1519384658114" expanded="false" signature="6:259" ph="..." />
+                    <marker date="1519384658114" expanded="true" signature="281:1179" ph="{...}" />
+                    <marker date="1519384658114" expanded="true" signature="427:1177" ph="{...}" />
+                    <marker date="1519384658114" expanded="true" signature="434:646" ph="/* public ApplicationUser() ... */" />
+                    <marker date="1519384658114" expanded="true" signature="794:1171" ph="/* public virtual ICollection&lt;Friend&gt; ReceievedFriendRequests { get; set; } ... */" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="MessageViewModel.cs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Models/ChatViewModel/MessageViewModel.cs">
               <provider selected="true" editor-type-id="text-editor">
@@ -420,39 +255,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_Layout.cshtml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Views/Shared/_Layout.cshtml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2040">
-                  <caret line="85" column="35" lean-forward="false" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
-                  <folding>
-                    <marker date="1519328974931" expanded="true" signature="23:1239" ph="&lt;head.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="183:676" ph="&lt;environment.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="426:602" ph="@*...*@" />
-                    <marker date="1519328974931" expanded="true" signature="681:1231" ph="&lt;environment.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1240:5763" ph="&lt;body.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1267:2256" ph="&lt;nav.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1331:2249" ph="&lt;div.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1515:2186" ph="&lt;ul.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1567:1740" ph="&lt;li.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1588:1722" ph="&lt;a.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1753:1924" ph="&lt;li.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1774:1906" ph="&lt;a.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1937:2117" ph="&lt;li.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="1958:2099" ph="&lt;a.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="2285:4077" ph="@*...*@" />
-                    <marker date="1519328974931" expanded="true" signature="4078:4189" ph="&lt;main.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="4192:4630" ph="&lt;environment.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="4425:4548" ph="@*...*@" />
-                    <marker date="1519328974931" expanded="true" signature="4631:5711" ph="&lt;environment.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="4672:4990" ph="&lt;script.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="4995:5219" ph="&lt;script.../&gt;" />
-                    <marker date="1519328974931" expanded="true" signature="5224:5624" ph="&lt;script.../&gt;" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="Tools.cshtml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Views/Shared/Tools.cshtml">
               <provider selected="true" editor-type-id="text-editor">
@@ -480,7 +282,7 @@
           <file leaf-file-name="SearchController.cs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Controllers/SearchController.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="246">
+                <state relative-caret-position="191">
                   <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
                   <folding>
                     <marker date="1519353121528" expanded="false" signature="6:241" ph="..." />
@@ -497,30 +299,30 @@
           <file leaf-file-name="SearchUser.cshtml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Views/Shared/SearchUser.cshtml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="197">
-                  <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+                <state relative-caret-position="216">
+                  <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
                   <folding>
-                    <marker date="1519353121532" expanded="true" signature="54:1086" ph="&lt;section.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="68:1075" ph="&lt;table.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="98:306" ph="&lt;thead.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="114:289" ph="&lt;tr.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="131:221" ph="&lt;th.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="234:274" ph="&lt;th.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="315:1062" ph="&lt;tbody.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="331:1045" ph="@..." />
-                    <marker date="1519353121532" expanded="true" signature="365:1045" ph="{...}" />
-                    <marker date="1519353121532" expanded="true" signature="388:1035" ph="&lt;tr.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="409:497" ph="&lt;td.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="515:1017" ph="&lt;td.../&gt;" />
-                    <marker date="1519353121532" expanded="true" signature="540:995" ph="@..." />
-                    <marker date="1519353121532" expanded="true" signature="604:995" ph="{...}" />
-                    <marker date="1519353121532" expanded="true" signature="708:973" ph="&lt;button.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="54:1098" ph="&lt;section.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="68:1087" ph="&lt;table.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="98:318" ph="&lt;thead.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="114:301" ph="&lt;tr.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="131:221" ph="&lt;th.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="234:286" ph="&lt;th.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="327:1074" ph="&lt;tbody.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="343:1057" ph="@..." />
+                    <marker date="1519384582976" expanded="true" signature="377:1057" ph="{...}" />
+                    <marker date="1519384582976" expanded="true" signature="400:1047" ph="&lt;tr.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="421:509" ph="&lt;td.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="527:1029" ph="&lt;td.../&gt;" />
+                    <marker date="1519384582976" expanded="true" signature="552:1007" ph="@..." />
+                    <marker date="1519384582976" expanded="true" signature="616:1007" ph="{...}" />
+                    <marker date="1519384582976" expanded="true" signature="720:985" ph="&lt;button.../&gt;" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Friends" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Friends" pinned="false" current-in-tab="false">
             <entry file="das://table:/166d1b46/76e4bdd5-c5ae-47ce-b559-f6bec5a25cbe/mlmdb.dbo.Friends">
               <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
                 <state>
@@ -716,7 +518,6 @@
         <option value="$PROJECT_DIR$/Views/Shared/Tools.cshtml" />
         <option value="$PROJECT_DIR$/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/Models/SearchViewModel/SearchUserViewModel.cs" />
-        <option value="$PROJECT_DIR$/Models/ApplicationUser.cs" />
         <option value="$PROJECT_DIR$/Controllers/AddFriendController.cs" />
         <option value="$PROJECT_DIR$/appsettings.json" />
         <option value="$PROJECT_DIR$/Controllers/ChatController.cs" />
@@ -724,10 +525,11 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/76e4bdd5-c5ae-47ce-b559-f6bec5a25cbe/console.sql" />
         <option value="$PROJECT_DIR$/Models/ChatModel/MessageModel.cs" />
         <option value="$PROJECT_DIR$/Controllers/SearchController.cs" />
-        <option value="$PROJECT_DIR$/Views/Shared/SearchUser.cshtml" />
         <option value="$PROJECT_DIR$/Models/Friendship/Friends.cs" />
         <option value="$PROJECT_DIR$/Data/ApplicationDbContext.cs" />
         <option value="$PROJECT_DIR$/Controllers/FriendsController.cs" />
+        <option value="$PROJECT_DIR$/Views/Shared/SearchUser.cshtml" />
+        <option value="$PROJECT_DIR$/Models/ApplicationUser.cs" />
       </list>
     </option>
   </component>
@@ -943,12 +745,12 @@
       <workItem from="1518755297279" duration="20334000" />
       <workItem from="1519077142398" duration="70193000" />
       <workItem from="1519295377944" duration="12168000" />
-      <workItem from="1519325623789" duration="18000000" />
+      <workItem from="1519325623789" duration="19177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230509000" />
+    <option name="totallyTimeSpent" value="231686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -961,7 +763,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -970,7 +771,7 @@
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292232" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49445128" sideWeight="0.49427754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292232" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51294696" sideWeight="0.49427754" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51294696" sideWeight="0.49427754" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292232" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292232" sideWeight="0.49427754" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13519314" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1189,18 +990,6 @@
             <marker date="1519234481110" expanded="true" signature="6530:6559" ph="{...}" />
             <marker date="1519234481110" expanded="true" signature="6617:6918" ph="{...}" />
             <marker date="1519234481110" expanded="true" signature="6809:6832" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/ApplicationUser.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <marker date="1519328974926" expanded="false" signature="6:230" ph="..." />
-            <marker date="1519328974926" expanded="true" signature="398:1133" ph="{...}" />
-            <marker date="1519328974926" expanded="true" signature="405:1127" ph="/* public ApplicationUser() ... */" />
           </folding>
         </state>
       </provider>
@@ -1588,21 +1377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/SearchController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <marker date="1519353121528" expanded="false" signature="6:241" ph="..." />
-            <marker date="1519353121528" expanded="true" signature="268:1024" ph="{...}" />
-            <marker date="1519353121528" expanded="true" signature="349:1022" ph="{...}" />
-            <marker date="1519353121528" expanded="true" signature="470:518" ph="{...}" />
-            <marker date="1519353121528" expanded="true" signature="610:1016" ph="{...}" />
-            <marker date="1519353121528" expanded="true" signature="749:851" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/166d1b46/76e4bdd5-c5ae-47ce-b559-f6bec5a25cbe/mlmdb.dbo.Message">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1664,30 +1438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Shared/SearchUser.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-          <folding>
-            <marker date="1519353121532" expanded="true" signature="54:1086" ph="&lt;section.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="68:1075" ph="&lt;table.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="98:306" ph="&lt;thead.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="114:289" ph="&lt;tr.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="131:221" ph="&lt;th.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="234:274" ph="&lt;th.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="315:1062" ph="&lt;tbody.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="331:1045" ph="@..." />
-            <marker date="1519353121532" expanded="true" signature="365:1045" ph="{...}" />
-            <marker date="1519353121532" expanded="true" signature="388:1035" ph="&lt;tr.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="409:497" ph="&lt;td.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="515:1017" ph="&lt;td.../&gt;" />
-            <marker date="1519353121532" expanded="true" signature="540:995" ph="@..." />
-            <marker date="1519353121532" expanded="true" signature="604:995" ph="{...}" />
-            <marker date="1519353121532" expanded="true" signature="708:973" ph="&lt;button.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/Friendship/Friends.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -1714,13 +1464,6 @@
             <marker date="1519353121529" expanded="true" signature="484:504" ph="{...}" />
             <marker date="1519353121529" expanded="true" signature="686:833" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/166d1b46/76e4bdd5-c5ae-47ce-b559-f6bec5a25cbe/mlmdb.dbo.Friends">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1794,6 +1537,66 @@
         <state relative-caret-position="48">
           <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/166d1b46/76e4bdd5-c5ae-47ce-b559-f6bec5a25cbe/mlmdb.dbo.Friends">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/SearchController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <marker date="1519353121528" expanded="false" signature="6:241" ph="..." />
+            <marker date="1519353121528" expanded="true" signature="268:1024" ph="{...}" />
+            <marker date="1519353121528" expanded="true" signature="349:1022" ph="{...}" />
+            <marker date="1519353121528" expanded="true" signature="470:518" ph="{...}" />
+            <marker date="1519353121528" expanded="true" signature="610:1016" ph="{...}" />
+            <marker date="1519353121528" expanded="true" signature="749:851" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Shared/SearchUser.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <marker date="1519384582976" expanded="true" signature="54:1098" ph="&lt;section.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="68:1087" ph="&lt;table.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="98:318" ph="&lt;thead.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="114:301" ph="&lt;tr.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="131:221" ph="&lt;th.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="234:286" ph="&lt;th.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="327:1074" ph="&lt;tbody.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="343:1057" ph="@..." />
+            <marker date="1519384582976" expanded="true" signature="377:1057" ph="{...}" />
+            <marker date="1519384582976" expanded="true" signature="400:1047" ph="&lt;tr.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="421:509" ph="&lt;td.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="527:1029" ph="&lt;td.../&gt;" />
+            <marker date="1519384582976" expanded="true" signature="552:1007" ph="@..." />
+            <marker date="1519384582976" expanded="true" signature="616:1007" ph="{...}" />
+            <marker date="1519384582976" expanded="true" signature="720:985" ph="&lt;button.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/ApplicationUser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" column="2" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding>
+            <marker date="1519384658114" expanded="false" signature="6:259" ph="..." />
+            <marker date="1519384658114" expanded="true" signature="281:1179" ph="{...}" />
+            <marker date="1519384658114" expanded="true" signature="427:1177" ph="{...}" />
+            <marker date="1519384658114" expanded="true" signature="434:646" ph="/* public ApplicationUser() ... */" />
+            <marker date="1519384658114" expanded="true" signature="794:1171" ph="/* public virtual ICollection&lt;Friend&gt; ReceievedFriendRequests { get; set; } ... */" />
+          </folding>
         </state>
       </provider>
     </entry>
