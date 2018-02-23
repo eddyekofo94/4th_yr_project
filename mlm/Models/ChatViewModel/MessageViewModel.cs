@@ -20,7 +20,7 @@ namespace mlm.Models.ChatViewModel
             Content = msg.MessageText;
             ContentTranslated = msg.MessageTranslated;
             Author = msg.User.UserName;
-//            Timestamp = msg.DateCreated;
+            Timestamp = msg.DateCreated;
         }
 
         [Required]

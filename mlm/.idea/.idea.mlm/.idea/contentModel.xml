@@ -26,10 +26,8 @@
       </e>
       <e p="links.txt" t="Include" />
       <e p="Migrations" t="Include">
-        <e p="20180223004219_Initial_migration.cs" t="Include" />
-        <e p="20180223004219_Initial_migration.Designer.cs" t="Include" />
-        <e p="20180223014356_Azure_DB.cs" t="Include" />
-        <e p="20180223014356_Azure_DB.Designer.cs" t="Include" />
+        <e p="20180223123832_Initial_migration.cs" t="Include" />
+        <e p="20180223123832_Initial_migration.Designer.cs" t="Include" />
         <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="mlm.csproj" t="IncludeRecursive" />
@@ -45,6 +43,9 @@
           <e p="ResetPasswordViewModel.cs" t="Include" />
         </e>
         <e p="ApplicationUser.cs" t="Include" />
+        <e p="ApplicationUserViewModel" t="Include">
+          <e p="UserProfile.cs" t="Include" />
+        </e>
         <e p="ChatModel" t="Include">
           <e p="ComputeService.cs" t="Include" />
           <e p="MessageModel.cs" t="Include" />
@@ -56,7 +57,7 @@
         <e p="ErrorViewModel.cs" t="Include" />
         <e p="Friendship" t="Include">
           <e p="FriendRequests.cs" t="Include" />
-          <e p="Friends.cs" t="Include" />
+          <e p="Friendship.cs" t="Include" />
         </e>
         <e p="ManageViewModels" t="Include">
           <e p="ChangePasswordViewModel.cs" t="Include" />
@@ -137,11 +138,11 @@
           <e p="_Layout.cshtml" t="Include" />
           <e p="_LoginPartial.cshtml" t="Include" />
           <e p="_SideNav.cshtml" t="Include" />
+          <e p="_UserProfile.cshtml" t="Include" />
           <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="SearchUser.cshtml" t="Include" />
           <e p="Tools.cshtml" t="Include" />
-          <e p="UserProfile.cshtml" t="Include" />
         </e>
       </e>
       <e p="wwwroot" t="Include">

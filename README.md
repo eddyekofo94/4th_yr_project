@@ -1,13 +1,30 @@
 # 4th_yr_project
+##TODO:
+
+- [] Search non friends only
+
+- [] Approve friend
+
+- [] Send to friend only
+
+- [] GUID for friendship
+
+- [] ID for relationship table
+
 ## 1. Technologies: What & Why
-   * I wish to make web app (MVC) because of the highly powerful mobile devices we have now.
-   * A Web app is easier to maintain.
-   * Web apps are compatible with almost any device.
-   * I don’t need my app to utilise any device-specific features.
-     * My Dashboard also will be built on MVC, so I will be using C# across all my apps.
+
+   *I wish to make web app (MVC) because of the highly powerful mobile devices we have now.
+
+   *A Web app is easier to maintain.
+   
+   *Web apps are compatible with almost any device.
+   
+   *I don’t need my app to utilise any device-specific features.
+   
+   *My Dashboard also will be built on MVC, so I will be using C# across all my apps.
 ## 2. Features on the Dashboard
 ### Translation	
-* Popular language(User may choose from 60 different languages Microsoft Translator API provides)	 
+* Popular language(User may choose from 60 different languages Google Translator API provides)	 
 * Days(Which the app is highly used)	
 * Location (Where is the users using the app located? e.g. Dublin, Paris etc…)
 * Age (Demographic)

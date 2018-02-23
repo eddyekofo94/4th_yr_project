@@ -37,9 +37,7 @@ namespace mlm.Models.ChatModel
 
             public ApplicationUser User { get; set; }
 
-//            [Required]
             [DataType(DataType.Date)]
-//            [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
             public DateTime DateCreated { get; private set; }
 
             [Required] public string MessageText { get; set; }
@@ -62,14 +60,13 @@ namespace mlm.Models.ChatModel
                 {
                     HttpClientInitializer = credential
                 });
-                // var message = "This is some html text to <strong>translate</strong>!";
+
                 string targetLanguage = "fr";
                 string sourceLanguage = null; // automatically detected
                 var client = Google.Cloud.Translation.V2.TranslationClient.Create();
                 try
                 {
                     var response = client.TranslateHtml(msgIn, targetLanguage, sourceLanguage);
-//                    Console.WriteLine(">>>>>>>>>>>>>>> The translatad text: " + response.TranslatedText);
                     return response.TranslatedText;
                 }
                 catch (Exception ex)

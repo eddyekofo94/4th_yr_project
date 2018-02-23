@@ -19,13 +19,16 @@ namespace mlm.Data
 
         public DbSet<MessageModel> Message { get; set; }
 
-        public DbSet<Friends> Friends { get; set; }
+        public DbSet<Friendship> Friendships { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<Friends>()
-                .HasKey(f => f.FriendshipId);
+            builder.Entity<Friendship>(entity =>
+            {
+                entity.HasKey(f => new {f.UserId, f.FriendId});
+            });
+
         }
     }
 }

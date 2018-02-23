@@ -11,8 +11,8 @@ using System;
 namespace mlm.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180223014356_Azure_DB")]
-    partial class Azure_DB
+    [Migration("20180223123832_Initial_migration")]
+    partial class Initial_migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -144,7 +144,7 @@ namespace mlm.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<Guid?>("FriendshipId");
+                    b.Property<string>("ImgUrl");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -170,8 +170,6 @@ namespace mlm.Migrations
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FriendshipId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -206,20 +204,19 @@ namespace mlm.Migrations
                     b.ToTable("Message");
                 });
 
-            modelBuilder.Entity("mlm.Models.Friendship.Friends", b =>
+            modelBuilder.Entity("mlm.Models.Friendship.Friendship", b =>
                 {
-                    b.Property<Guid>("FriendshipId")
-                        .ValueGeneratedOnAdd();
+                    b.Property<string>("UserId");
 
                     b.Property<string>("FriendEmail");
 
-                    b.Property<string>("UserId");
+                    b.Property<Guid>("FriendshipId");
 
-                    b.HasKey("FriendshipId");
+                    b.HasKey("UserId", "FriendEmail");
 
-                    b.HasIndex("UserId");
+                    b.HasAlternateKey("FriendshipId");
 
-                    b.ToTable("Friends");
+                    b.ToTable("Friendships");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -267,13 +264,6 @@ namespace mlm.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("mlm.Models.ApplicationUser", b =>
-                {
-                    b.HasOne("mlm.Models.Friendship.Friends")
-                        .WithMany("Friendships")
-                        .HasForeignKey("FriendshipId");
-                });
-
             modelBuilder.Entity("mlm.Models.ChatModel.mlm.MessageModel", b =>
                 {
                     b.HasOne("mlm.Models.ApplicationUser", "User")
@@ -282,11 +272,12 @@ namespace mlm.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("mlm.Models.Friendship.Friends", b =>
+            modelBuilder.Entity("mlm.Models.Friendship.Friendship", b =>
                 {
                     b.HasOne("mlm.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
+                        .WithMany("Friendships")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

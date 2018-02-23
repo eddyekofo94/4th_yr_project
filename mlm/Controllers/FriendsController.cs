@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace mlm.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class FriendsController : Controller
     {
@@ -27,9 +28,13 @@ namespace mlm.Controllers
 
         private Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
 
+// TODO: Get all of user's friends
+//        [HttpGet]
+//        public async Task<IActionResult> GetFriends(string item)
+//        {
+//        }
 
 //        POST
-        [Authorize]
         [HttpPost, Route("[action]")]
         public async Task<IActionResult> AddFriend(string item)
         {
@@ -40,46 +45,65 @@ namespace mlm.Controllers
 
             var users = from u in _context.Users
                 select u;
-            var friendship = from f in _context.Friends
-                select f;
 
             // Get the current user
-            var user = await GetCurrentUserAsync();
-            if (user == null) return Forbid();
-
-            
-                friendship = friendship.Where(u => u.FriendEmail.Contains(item));
-
-                if (friendship.ToString().Equals(item))
-                {
-                    Console.Write(">>>>>>>>>>>>>>>>>>>: ALREADY FRIENDS");
-                }
-            
+            var currentUser = await GetCurrentUserAsync();
+            if (currentUser == null) return Forbid();
 
             if (!String.IsNullOrEmpty(item))
             {
                 users = users.Where(u => u.Email.Contains(item));
-//                var result = await users.ToListAsync();
-                foreach (var u in users)
-                {
-                    var friendRequest = new Friends()
-                    {
-                        UserId = user.Id,
-                        User = user,
-                        FriendEmail = u.Email,
-                        Friendships = new List<ApplicationUser>()
-                    };
-                    friendRequest.Friendships.Add(u);
-                    // Save the new friendship to db
-                    await _context.AddAsync(friendRequest);
-                }
             }
 
+// TODO: Check if current user is not a friend with the added user
+            Friendship friendship = new Friendship()
+            {
+                UserId = currentUser.Id
+            };
+            foreach (var u in users)
+            {
+                friendship.User = u;
+                Console.WriteLine(">>>>>>>>>>>>>>>>>>>>: ID " + friendship.FriendshipId);
+                friendship.FriendId = u.Id;
+                friendship.FriendEmail = u.Email;
+            }
+
+            await _context.AddAsync(friendship);
             await _context.SaveChangesAsync();
-//            user.SentFriendRequests.Add(friendRequest);
 
             return new NoContentResult();
-//            View();
+        }
+
+        //TODO: Test this methos if user's cand delete friend
+        [HttpPost]
+        public async Task<IActionResult> DeleteFriend(string item)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var friendships = from u in _context.Friendships
+                select u;
+            // Get the current user
+            var currentUser = await GetCurrentUserAsync();
+            if (currentUser == null) return Forbid();
+
+            if (!String.IsNullOrEmpty(item))
+            {
+                friendships = friendships.Where(u => u.FriendEmail.Contains(item));
+                foreach (var friend in friendships)
+                {
+                    Console.WriteLine(">>>>>>>>>>>>>>>>>>: " + friend.FriendEmail + "Friendship ID: " +
+                                      friend.FriendshipId);
+                    currentUser.Friendships.Remove(friend);
+                }
+
+                await _context.AddAsync(friendships);
+                await _context.SaveChangesAsync();
+            }
+
+            return new NoContentResult();
         }
     }
 }

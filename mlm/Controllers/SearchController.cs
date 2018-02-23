@@ -4,12 +4,14 @@ using System.Threading.Tasks;
 using mlm.Data;
 using mlm.Models;
 using mlm.Models.SearchViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace mlm.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class SearchController : Controller
     {

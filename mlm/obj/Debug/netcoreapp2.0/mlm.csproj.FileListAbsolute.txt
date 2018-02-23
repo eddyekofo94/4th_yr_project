@@ -1,12 +1,12 @@
+/Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/mlm.csproj.CoreCompileInputs.cache
+/Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs
+/Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/mlm.AssemblyInfoInputs.cache
+/Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/mlm.AssemblyInfo.cs
 /Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/bin/Debug/netcoreapp2.0/app.db
 /Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/bin/Debug/netcoreapp2.0/mlm.deps.json
 /Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/bin/Debug/netcoreapp2.0/mlm.runtimeconfig.json
 /Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/bin/Debug/netcoreapp2.0/mlm.runtimeconfig.dev.json
 /Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/bin/Debug/netcoreapp2.0/mlm.dll
 /Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/bin/Debug/netcoreapp2.0/mlm.pdb
-/Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/mlm.csproj.CoreCompileInputs.cache
-/Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs
-/Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/mlm.AssemblyInfoInputs.cache
-/Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/mlm.AssemblyInfo.cs
 /Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/mlm.dll
 /Users/eddyekofo/Google Drive/College/4th Year/4th_yr_project/mlm/obj/Debug/netcoreapp2.0/mlm.pdb

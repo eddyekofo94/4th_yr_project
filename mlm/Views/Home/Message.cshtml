@@ -4,69 +4,133 @@
 @{
     ViewData["Title"] = "Message";
 }
-<section class="section no-pad-bot" id="message">
-
-    <main role="main" class="container">
-
-        <div class="content">
-            <div class="contact-profile position-fixed w-75">
-                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
-                <p>Harvey Specter</p>
-                <div class="social-media">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
+<section>
+    <div class="row no-pad-bot" id="message">
+        @*    <section class="section >*@
+        <div class="col s12 m4 l3">
+            <ul>
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="https://placeimg.com/640/480/nature">
+                        </div>
+                        <a href="#!user">
+                            <img class="circle" src="http://emilcarlsson.se/assets/mikeross.png">
+                        </a>
+                        <a href="#!name">
+                            <span class="white-text name">John Doe</span>
+                        </a>
+                        @await Html.PartialAsync("_UserProfile")
+                    </div>
+                </li>
+                <div id="contacts">
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <img src="http://emilcarlsson.se/assets/rachelzane.png" alt="" class="circle">
+                            <span class="title">Title</span>
+                            <p>
+                                First Line <br>
+                                Second Line
+                            </p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" class="circle">
+                            <span class="title">Title</span>
+                            <p>
+                                First Line <br>
+                                Second Line
+                            </p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" class="circle">
+                            <span class="title">Title</span>
+                            <p>
+                                First Line <br>
+                                Second Line
+                            </p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" class="circle">
+                            <span class="title">Title</span>
+                            <p>
+                                First Line <br>
+                                Second Line
+                            </p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" class="circle">
+                            <span class="title">Title</span>
+                            <p>
+                                First Line <br>
+                                Second Line
+                            </p>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="messages">
-                <ul>
-                    <li class="sent">
-                        <img src="http://emilcarlsson.se/assets/mikeross.png" alt=""/>
-                        <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
-                    </li>
-                    <li class="replies">
-                        <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
-                        <p>When you're backed against the wall, break the god damn thing down.</p>
-                    </li>
-                    <li class="replies">
-                        <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
-                        <p>Excuses don't win championships.</p>
-                    </li>
-                    <li class="sent">
-                        <img src="http://emilcarlsson.se/assets/mikeross.png" alt=""/>
-                        <p>Oh yeah, did Michael Jordan tell you that?</p>
-                    </li>
-                    <li class="replies">
-                        <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
-                        <p>No, I told him that.</p>
-                    </li>
-                    <li class="replies">
-                        <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
-                        <p>What are your choices when someone puts a gun to your head?</p>
-                    </li>
-                    <li class="sent">
-                        <img src="http://emilcarlsson.se/assets/mikeross.png" alt=""/>
-                        <p>What are you talking about? You do what they say or they shoot you.</p>
-                    </li>
-                    <li class="replies">
-                        <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
-                        <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="message-input position-fixed w-75">
-                <div class="wrap">
-                    <input type="text" id="messageIn" placeholder="Write your message..."/>
-                    <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
-                    <button class="submit">
-                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
+            </ul>
         </div>
-    </main>
-    <!--/.container-->
+        <main role="main" class="container">
+            <div class="content col s12 m8 l9">
+                <div class="contact-profile position-fixed w-75">
+                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
+                    <p>Harvey Specter</p>
+                    <div class="social-media">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="messages">
+                    <ul>
+                        <li class="sent">
+                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt=""/>
+                            <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
+                            <p>When you're backed against the wall, break the god damn thing down.</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
+                            <p>Excuses don't win championships.</p>
+                        </li>
+                        <li class="sent">
+                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt=""/>
+                            <p>Oh yeah, did Michael Jordan tell you that?</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
+                            <p>No, I told him that.</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
+                            <p>What are your choices when someone puts a gun to your head?</p>
+                        </li>
+                        <li class="sent">
+                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt=""/>
+                            <p>What are you talking about? You do what they say or they shoot you.</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
+                            <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="message-input position-fixed w-75">
+                    <div class="wrap">
+                        <input type="text" id="messageIn" placeholder="Write your message..."/>
+                        <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                        <button class="submit">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--/.container-->
+    </div>
 </section>
+
 
 <script src="~/js/jquery.js"></script>
 <script src="~/js/signalr-client-1.0.0-alpha2-final.min.js"></script>
