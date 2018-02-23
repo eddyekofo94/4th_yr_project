@@ -32,6 +32,6 @@ _UpgradeReport_Files/
 Thumbs.db
 Desktop.ini
 
-mlm/appsettings.json
+**/appsettings.json
 .DS_Store
 AspNetCoreSpa
