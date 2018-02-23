@@ -2,7 +2,7 @@
 ## TODO:
 
 
-- [] Search non friends only
+- [ ] Search non friends only
 
 - [ ] Approve friend
 
@@ -14,7 +14,7 @@
 
 ## 1. Technologies: What & Why
 
-   * I wish to make web app (MVC) because of the highly powerful mobile devices we have now.
+   * I wish to make web app (MVC Core) because of the highly powerful mobile devices we have now.
 
    * A Web app is easier to maintain.
    
