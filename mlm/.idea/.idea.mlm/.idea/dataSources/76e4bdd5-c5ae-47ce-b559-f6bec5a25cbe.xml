@@ -14,7 +14,7 @@
     </database>
     <schema id="4" parent="2" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2018-02-23.20:05:22.920</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-02-28.13:32:54.993</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -87,7 +87,7 @@
     <table id="23" parent="4" name="Friendships">
       <ObjectId>370100359</ObjectId>
       <CreatedTimestamp>2018-02-23.12:39:06.523</CreatedTimestamp>
-      <ModifiedTimestamp>2018-02-23.15:29:24.320</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-02-23.22:06:04.673</ModifiedTimestamp>
     </table>
     <table id="24" parent="4" name="Message">
       <ObjectId>434100587</ObjectId>
@@ -470,34 +470,18 @@ Name</ColNames>
       <DataType>nvarchar(450)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="93" parent="23" name="FriendshipId">
-      <Position>3</Position>
-      <DataType>uniqueidentifier|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="94" parent="23" name="FriendId">
+    <column id="93" parent="23" name="FriendId">
       <Position>4</Position>
       <DataType>nvarchar(max)|0</DataType>
     </column>
-    <column id="95" parent="23" name="FriendshipTime">
-      <Position>5</Position>
-      <DefaultExpression>&apos;0001-01-01T00:00:00.000&apos;</DefaultExpression>
-      <DataType>datetime2|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="96" parent="23" name="PK_Friendships">
+    <index id="94" parent="23" name="PK_Friendships">
       <Position>1</Position>
       <ColNames>UserId
 FriendEmail</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <index id="97" parent="23" name="AK_Friendships_FriendshipId">
-      <Position>2</Position>
-      <ColNames>FriendshipId</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="98" parent="23" name="PK_Friendships">
+    <key id="95" parent="23" name="PK_Friendships">
       <ObjectId>386100416</ObjectId>
       <CreatedTimestamp>2018-02-23.12:39:06.523</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-23.12:39:06.523</ModifiedTimestamp>
@@ -506,14 +490,7 @@ FriendEmail</ColNames>
       <UnderlyingIndexName>PK_Friendships</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="99" parent="23" name="AK_Friendships_FriendshipId">
-      <ObjectId>402100473</ObjectId>
-      <CreatedTimestamp>2018-02-23.12:39:06.523</CreatedTimestamp>
-      <ModifiedTimestamp>2018-02-23.12:39:06.523</ModifiedTimestamp>
-      <ColNames>FriendshipId</ColNames>
-      <UnderlyingIndexName>AK_Friendships_FriendshipId</UnderlyingIndexName>
-    </key>
-    <foreign-key id="100" parent="23" name="FK_Friendships_AspNetUsers_UserId">
+    <foreign-key id="96" parent="23" name="FK_Friendships_AspNetUsers_UserId">
       <ObjectId>418100530</ObjectId>
       <CreatedTimestamp>2018-02-23.12:39:06.523</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-23.12:39:06.523</ModifiedTimestamp>
@@ -524,41 +501,41 @@ FriendEmail</ColNames>
       <RefKeyName>PK_AspNetUsers</RefKeyName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
-    <column id="101" parent="24" name="MessageId">
+    <column id="97" parent="24" name="MessageId">
       <Position>1</Position>
       <DataType>uniqueidentifier|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="102" parent="24" name="DateCreated">
+    <column id="98" parent="24" name="DateCreated">
       <Position>2</Position>
       <DataType>datetime2|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="103" parent="24" name="MessageText">
+    <column id="99" parent="24" name="MessageText">
       <Position>3</Position>
       <DataType>nvarchar(max)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="104" parent="24" name="MessageTranslated">
+    <column id="100" parent="24" name="MessageTranslated">
       <Position>4</Position>
       <DataType>nvarchar(max)|0</DataType>
     </column>
-    <column id="105" parent="24" name="UserId">
+    <column id="101" parent="24" name="UserId">
       <Position>5</Position>
       <DataType>nvarchar(450)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="106" parent="24" name="PK_Message">
+    <index id="102" parent="24" name="PK_Message">
       <Position>1</Position>
       <ColNames>MessageId</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <index id="107" parent="24" name="IX_Message_UserId">
+    <index id="103" parent="24" name="IX_Message_UserId">
       <Position>2</Position>
       <ColNames>UserId</ColNames>
     </index>
-    <key id="108" parent="24" name="PK_Message">
+    <key id="104" parent="24" name="PK_Message">
       <ObjectId>450100644</ObjectId>
       <CreatedTimestamp>2018-02-23.12:39:06.667</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-23.12:39:06.667</ModifiedTimestamp>
@@ -566,7 +543,7 @@ FriendEmail</ColNames>
       <UnderlyingIndexName>PK_Message</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="109" parent="24" name="FK_Message_AspNetUsers_UserId">
+    <foreign-key id="105" parent="24" name="FK_Message_AspNetUsers_UserId">
       <ObjectId>466100701</ObjectId>
       <CreatedTimestamp>2018-02-23.12:39:06.667</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-23.12:39:06.667</ModifiedTimestamp>
@@ -577,23 +554,23 @@ FriendEmail</ColNames>
       <RefKeyName>PK_AspNetUsers</RefKeyName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
-    <column id="110" parent="25" name="MigrationId">
+    <column id="106" parent="25" name="MigrationId">
       <Position>1</Position>
       <DataType>nvarchar(150)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="111" parent="25" name="ProductVersion">
+    <column id="107" parent="25" name="ProductVersion">
       <Position>2</Position>
       <DataType>nvarchar(32)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="112" parent="25" name="PK___EFMigrationsHistory">
+    <index id="108" parent="25" name="PK___EFMigrationsHistory">
       <Position>1</Position>
       <ColNames>MigrationId</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="113" parent="25" name="PK___EFMigrationsHistory">
+    <key id="109" parent="25" name="PK___EFMigrationsHistory">
       <ObjectId>34099162</ObjectId>
       <CreatedTimestamp>2018-02-23.12:39:04.087</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-23.12:39:04.087</ModifiedTimestamp>

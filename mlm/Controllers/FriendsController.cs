@@ -52,18 +52,19 @@ namespace mlm.Controllers
 
             if (!String.IsNullOrEmpty(item))
             {
-                users = users.Where(u => u.Email.Contains(item));
+                users = users.Where(u => u.Email.Contains(item) );
             }
 
 // TODO: Check if current user is not a friend with the added user
             Friendship friendship = new Friendship()
             {
-                UserId = currentUser.Id
+                UserId = currentUser.Id,
+                FriendshipTime = DateTime.Today,
+                FriendshipId = Guid.NewGuid()
             };
             foreach (var u in users)
             {
                 friendship.User = u;
-                Console.WriteLine(">>>>>>>>>>>>>>>>>>>>: ID " + friendship.FriendshipId);
                 friendship.FriendId = u.Id;
                 friendship.FriendEmail = u.Email;
             }
